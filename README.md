@@ -10,5 +10,7 @@ The DREAMS telescope is the next in a series of telescopes being brought to Virt
 
 ### Links
 [Project Landing Page - Information About our Project](https://sites.google.com/view/2021-s1-techlauncher-dreams/home)
+
 [Google Drive - Documentation & Assets](https://drive.google.com/drive/folders/1t5c98lrFjwyEk9zY1YzWD830OpFi4I1T?usp=sharing)
+
 [Trello - Kanban Style Development Board](https://trello.com/b/t7usLZgQ/vr-dreams-telescope)
