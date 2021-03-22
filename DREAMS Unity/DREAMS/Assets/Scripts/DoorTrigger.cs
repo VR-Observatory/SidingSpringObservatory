@@ -19,14 +19,14 @@ public class DoorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Equals("Player")) {
+        if (other.gameObject.tag.Equals("Player")) {
             animator.SetBool("DoorOpen",true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag.Equals("Player"))
+        if (other.gameObject.tag.Equals("Player"))
         {
             animator.SetBool("DoorOpen", false);
         }
