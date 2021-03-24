@@ -39,21 +39,6 @@ public class DayNightCircle : MonoBehaviour
     [Header("Skybox")]
     public MySkybox[] skyboxes;
 
-
-
-    //private Skybox earlyMorning;
-    //[SerializeField]
-    //private Skybox morning;
-    //[SerializeField]
-    //private Skybox noon;
-    //[SerializeField]
-    //private Skybox afternoon;
-    //[SerializeField]
-    //private Skybox night;
-    //[SerializeField]
-    //private Skybox midnight;
-
-
     public enum SkyboxName {
         EARLYMORNING,
         MORNING,
@@ -137,8 +122,6 @@ public class DayNightCircle : MonoBehaviour
 
         sun.intensity = intensity * sunVariation + sunBaseIntensity;
     }
-
-
 
     private void AdjustMoon()
     {
