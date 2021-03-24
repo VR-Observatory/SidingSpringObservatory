@@ -3,7 +3,102 @@ guid: d62f93276963ead438f80daf46193782
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(0,0,64)
+    second: {fileID: 2100000, guid: fa42d078f21845a4a8bd5fa477c9eab3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(128,128,128)
+    second: {fileID: 2100000, guid: 43cbeefc5e3963643a71182acc62549e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(151,170,174)
+    second: {fileID: 2100000, guid: 95ad55fa076bd0646bf3f7c00991b883, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(153,153,153)
+    second: {fileID: 2100000, guid: a3950b4b38bf3e04c9caf839059f8423, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(170,151,81)
+    second: {fileID: 2100000, guid: bf8438a98510f8a4ca1c01af47c9c544, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(191,191,191)
+    second: {fileID: 2100000, guid: f9e9259d45cb4d54fa3c712368c4463f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(192,192,0)
+    second: {fileID: 2100000, guid: 44f3789848cda3b438998a7b756a8bac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(192,192,255)
+    second: {fileID: 2100000, guid: 153b0555cf6dc864c920564b023246e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(195,190,163)
+    second: {fileID: 2100000, guid: b33f21d782e6c1c40883c4cf99f0a669, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(204,204,204)
+    second: {fileID: 2100000, guid: f198a5bb3d81086439a1a971339ff7cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(216,209,160)
+    second: {fileID: 2100000, guid: 06e7724256536264eb07cb2e634f5fd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(221,221,227)
+    second: {fileID: 2100000, guid: 2b1f1b8f117ee804e8d5eb1470800e45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(229,235,237)
+    second: {fileID: 2100000, guid: 2fe27d2f4e77a0e45931bf0ba26712af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(255,0,0)
+    second: {fileID: 2100000, guid: b76effb70bdf5af4ba8966cfbe2ec643, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(255,153,0)
+    second: {fileID: 2100000, guid: e77fc915c50308f4d959396b05df8b6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(255,198,168)
+    second: {fileID: 2100000, guid: 86aafbc5fe410054ab1d4f9366b07ba7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(255,242,232)
+    second: {fileID: 2100000, guid: b3ded822eaa5a42438c36416e103dfb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(255,255,255)
+    second: {fileID: 2100000, guid: 5e5e85375aa17054f8ec339bf8a722be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Opaque(64,64,64)
+    second: {fileID: 2100000, guid: 1f776f77040338b4981a7904faf543e0, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -37,7 +132,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
+    useSRGBMaterialColor: 0
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -90,7 +185,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
