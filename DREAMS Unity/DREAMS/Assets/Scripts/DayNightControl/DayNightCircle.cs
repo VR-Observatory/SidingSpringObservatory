@@ -39,6 +39,8 @@ public class DayNightCircle : MonoBehaviour
     [Header("Skybox")]
     public MySkybox[] skyboxes;
 
+    private MySkybox currentSkybox;
+
     public enum SkyboxName {
         EARLYMORNING,
         MORNING,
@@ -52,6 +54,8 @@ public class DayNightCircle : MonoBehaviour
         public string name;
         public Material skybox;
     }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,25 +88,27 @@ public class DayNightCircle : MonoBehaviour
         {
             _timeOfDay -= 1;
         }
-        if (_timeOfDay > 0 && _timeOfDay < 0.25)
+        if (_timeOfDay > 0 && _timeOfDay < 0.27)
         {
-            RenderSettings.skybox = new Material(skyboxes[4].skybox); // midnight
+            currentSkybox = skyboxes[4]; // midnight
         }
         else if (_timeOfDay < 0.4)
         {
-            RenderSettings.skybox = new Material(skyboxes[0].skybox); // earlymorning
+            currentSkybox = skyboxes[0]; // earlymorning
         }
         else if (_timeOfDay < 0.6)
         {
-            RenderSettings.skybox = new Material(skyboxes[1].skybox); // morning, noon
+            currentSkybox = skyboxes[1]; // morning, noon
         }
-        else if (_timeOfDay < 0.75)
+        else if (_timeOfDay < 0.70)
         {
-            RenderSettings.skybox = new Material(skyboxes[2].skybox); // afternoon
+            currentSkybox = skyboxes[2]; // afternoon
         }
         else {
-            RenderSettings.skybox = new Material(skyboxes[3].skybox); // night
+            currentSkybox = skyboxes[3]; // night
         }
+        RenderSettings.skybox = new Material(currentSkybox.skybox);
+
     }
 
 
