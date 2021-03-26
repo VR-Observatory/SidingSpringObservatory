@@ -6,10 +6,13 @@ public class DayNightCircle : MonoBehaviour
 {
     [Header("Time")]
     [SerializeField]
-    private float _dayLength = 0.5f; //30s
+    private float _dayLength; //3 =3min, 0.5 = 30s
     [SerializeField]
     [Range(0f, 1f)]
     private float _timeOfDay;
+    [SerializeField]
+    [Range(2f,10)]
+    private float _changeSpeed; // Acceleration or deceleration speed
     private float _timeScale = 100f;
     public bool pause;
 
@@ -72,9 +75,10 @@ public class DayNightCircle : MonoBehaviour
     {
         if (!pause)
         {
+            ControlTime();
             UpdataTimeScale();
             UpdateTime();
-        }
+        } 
         AdjustSun();
         SunIntensity();
         AdjustMoon();
@@ -88,10 +92,13 @@ public class DayNightCircle : MonoBehaviour
 
     private void UpdateTime()
     {
-        _timeOfDay += Time.deltaTime * _timeScale / 86400;
-        if (_timeOfDay > 1)
+         _timeOfDay += Time.deltaTime * _timeScale / 86400;
+        if (_timeOfDay >= 1)
         {
             _timeOfDay -= 1;
+        }
+        else if (_timeOfDay < 0) {
+            _timeOfDay += 1;
         }
         if (_timeOfDay > 0 && _timeOfDay < 0.3)
         {
@@ -121,9 +128,6 @@ public class DayNightCircle : MonoBehaviour
         }
 
         RenderSettings.skybox = new Material(currentSkybox.skybox);
-       
-
-
     }
 
 
@@ -150,7 +154,13 @@ public class DayNightCircle : MonoBehaviour
         moon.intensity = (1 - intensity) * moonBaseIntensity + 0.1f;
     }
 
-    private void SpeedUp() {
 
+    // Acceleration or deceleration
+    private void ControlTime() {
+        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.E)) {
+            float direction = Input.GetAxisRaw("Oculus_CrossPlatform_Button2");
+            _timeOfDay = _timeOfDay + direction * Time.deltaTime * _timeScale / 86400 * _changeSpeed;
+        }
+        // todo: need to add "Pause" function
     }
 }
