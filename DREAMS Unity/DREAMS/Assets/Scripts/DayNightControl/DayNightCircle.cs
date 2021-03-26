@@ -55,11 +55,16 @@ public class DayNightCircle : MonoBehaviour
         public Material skybox;
     }
 
+    private Dictionary<string, MySkybox> _skyDic;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        _skyDic = new Dictionary<string, MySkybox>();
+        foreach (MySkybox skybox in skyboxes) {
+            _skyDic.Add(skybox.name, skybox); 
+        }
     }
 
     // Update is called once per frame
@@ -88,26 +93,36 @@ public class DayNightCircle : MonoBehaviour
         {
             _timeOfDay -= 1;
         }
-        if (_timeOfDay > 0 && _timeOfDay < 0.27)
+        if (_timeOfDay > 0 && _timeOfDay < 0.3)
         {
-            currentSkybox = skyboxes[4]; // midnight
+            currentSkybox = _skyDic["earlyDusk"];
         }
-        else if (_timeOfDay < 0.4)
+        else if (_timeOfDay < 0.32)
         {
-            currentSkybox = skyboxes[0]; // earlymorning
+            currentSkybox = _skyDic["earlyMorning"]; //  early dusk
+           
         }
-        else if (_timeOfDay < 0.6)
+        else if (_timeOfDay < 0.45)
         {
-            currentSkybox = skyboxes[1]; // morning, noon
+            currentSkybox = _skyDic["brightMorning"]; // ealymorning
+           
         }
-        else if (_timeOfDay < 0.70)
+        else if (_timeOfDay < 0.68)
         {
-            currentSkybox = skyboxes[2]; // afternoon
+            currentSkybox = _skyDic["noon"]; // brightmorning
         }
-        else {
-            currentSkybox = skyboxes[3]; // night
+        else if (_timeOfDay < 0.74) 
+        { 
+            currentSkybox = _skyDic["earlyDusk"];
         }
+        else 
+        {
+            currentSkybox = _skyDic["midNight"];
+        }
+
         RenderSettings.skybox = new Material(currentSkybox.skybox);
+       
+
 
     }
 
@@ -132,6 +147,10 @@ public class DayNightCircle : MonoBehaviour
     private void AdjustMoon()
     {
         moon.color = moonColor.Evaluate(1 - intensity);
-        moon.intensity = (1 - intensity) * moonBaseIntensity + 0.05f;
+        moon.intensity = (1 - intensity) * moonBaseIntensity + 0.1f;
+    }
+
+    private void SpeedUp() {
+
     }
 }
