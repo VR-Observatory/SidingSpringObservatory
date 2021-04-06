@@ -35,16 +35,5 @@ public class FirstPersonControlPC : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
 
     }
-
-    void RoofControl() {
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (roof.GetComponent<Animator>().GetBool("Roof") == true)
-                roof.GetComponent<Animator>().SetBool("Roof", false);
-            else
-                roof.GetComponent<Animator>().SetBool("Roof", true);
-        }
-
-    }
+    
 }
