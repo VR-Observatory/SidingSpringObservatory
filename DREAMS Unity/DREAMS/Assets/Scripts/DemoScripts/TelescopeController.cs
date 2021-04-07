@@ -4,31 +4,9 @@ using UnityEngine;
 
 public class TelescopeController : MonoBehaviour
 {
-    [Header("Settings")]
-    [SerializeField]
-    private GameObject midpart_connection;
-    [SerializeField]
-    private GameObject toppart_connection;
-    [SerializeField]
-    [Range(0f, 100f)]
-    private int rotation_speed;
-
-    [Header("Midpart Rotation")]
-    [SerializeField]
-    [Range(-90f,270f)]
-    private float midpart_minimum_angle;
-    [SerializeField]
-    [Range(-90f, 270f)]
-    private float midpart_maximum_angle;
-
-    [Header("Toppart Rotation")]
-    [SerializeField]
-    [Range(-90f, 270f)]
-    private float toppart_minimum_angle;
-    [SerializeField]
-    [Range(-90f, 270f)]
-    private float toppart_maximum_angle;
-
+    public GameObject midpart_connection, toppart_connection;
+    public float midpart_minimum_angle, midpart_maximum_angle, toppart_minimum_angle, toppart_maximum_angle;
+    public int rotation_speed;
     private float midpart_default_angle, toppart_default_angle;
 
     // Start is called before the first frame update
@@ -42,7 +20,7 @@ public class TelescopeController : MonoBehaviour
     void Update()
     {
         Move();
-        
+        print(toppart_default_angle);
     }
 
     private void Move() {
