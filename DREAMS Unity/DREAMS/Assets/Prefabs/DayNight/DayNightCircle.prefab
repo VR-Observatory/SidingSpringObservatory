@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e95226307526a4f85cedca40d58aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dayLength: 0.5
+  _dayLength: 5
   _timeOfDay: 0
+  _changeSpeed: 5
   pause: 0
   dailyRotation: {fileID: 8298325964873083034}
   sun: {fileID: 8298325965709542740}
@@ -113,15 +114,15 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   moonBaseIntensity: 0.3
   skyboxes:
-  - name: earyly_morning
+  - name: earlyMorning
     skybox: {fileID: 2100000, guid: 9991b6265f7f87d43b7e3c676739f203, type: 2}
-  - name: morning
+  - name: brightMorning
     skybox: {fileID: 2100000, guid: 0b846be1b116429409a7669cacf2a62e, type: 2}
-  - name: afternoon
-    skybox: {fileID: 2100000, guid: 1cf32c17fea93ef4fb120e8e0cdfbef1, type: 2}
-  - name: night
-    skybox: {fileID: 2100000, guid: 493bfb50af5d9424da505ba945c86600, type: 2}
-  - name: midenight
+  - name: earlyDusk
+    skybox: {fileID: 2100000, guid: 82b660520bdecce4daf45d270ec93fe4, type: 2}
+  - name: noon
+    skybox: {fileID: 2100000, guid: 3e56423e1fe71f94ea97f5bb2004a7e6, type: 2}
+  - name: midNight
     skybox: {fileID: 2100000, guid: 97637a2a763b7f24b8da4e139e4144ca, type: 2}
 --- !u!1 &8298325965470483973
 GameObject:
@@ -172,7 +173,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -295,7 +296,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1

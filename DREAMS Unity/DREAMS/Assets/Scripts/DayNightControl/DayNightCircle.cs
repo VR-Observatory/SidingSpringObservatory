@@ -11,7 +11,7 @@ public class DayNightCircle : MonoBehaviour
     [Range(0f, 1f)]
     private float _timeOfDay;
     [SerializeField]
-    [Range(2f,10)]
+    [Range(2f,1000)]
     private float _changeSpeed; // Acceleration or deceleration speed
     private float _timeScale = 100f;
     public bool pause;
@@ -106,17 +106,17 @@ public class DayNightCircle : MonoBehaviour
         }
         else if (_timeOfDay < 0.32)
         {
-            currentSkybox = _skyDic["earlyMorning"]; //  early dusk
+            currentSkybox = _skyDic["earlyMorning"]; 
            
         }
         else if (_timeOfDay < 0.45)
         {
-            currentSkybox = _skyDic["brightMorning"]; // ealymorning
+            currentSkybox = _skyDic["brightMorning"];
            
         }
         else if (_timeOfDay < 0.68)
         {
-            currentSkybox = _skyDic["noon"]; // brightmorning
+            currentSkybox = _skyDic["noon"];
         }
         else if (_timeOfDay < 0.74) 
         { 
@@ -154,13 +154,12 @@ public class DayNightCircle : MonoBehaviour
         moon.intensity = (1 - intensity) * moonBaseIntensity + 0.1f;
     }
 
-
-    // Acceleration or deceleration
+    // fast forward and backward
     private void ControlTime() {
-        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.E)) {
-            float direction = Input.GetAxisRaw("Oculus_CrossPlatform_Button2");
+        // PrimaryThumbstickVertical, down/e for fast forwad, up/q for backforward
+        float direction = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickVertical");
+        if (direction > 0.9 || direction < -0.9) {
             _timeOfDay = _timeOfDay + direction * Time.deltaTime * _timeScale / 86400 * _changeSpeed;
         }
-        // todo: need to add "Pause" function
     }
 }
