@@ -25,9 +25,8 @@ public class DayNightCircle : MonoBehaviour
     [SerializeField]
     private Gradient sunColor;
     private float intensity;
-    [SerializeField]
-    private float sunBaseIntensity = 1;
-    [SerializeField]
+
+    private float sunBaseIntensity = 0.6f;
     private float sunVariation = 1.5f;
 
 
@@ -36,8 +35,8 @@ public class DayNightCircle : MonoBehaviour
     private Light moon;
     [SerializeField]
     private Gradient moonColor;
-    [SerializeField]
-    private float moonBaseIntensity;
+
+    private float moonBaseIntensity = 0.3f;
 
     [Header("Skybox")]
     public MySkybox[] skyboxes;

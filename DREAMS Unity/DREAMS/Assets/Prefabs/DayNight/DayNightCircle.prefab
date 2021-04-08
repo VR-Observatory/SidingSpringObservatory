@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e95226307526a4f85cedca40d58aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dayLength: 5
+  _dayLength: 10
   _timeOfDay: 0
-  _changeSpeed: 5
+  _changeSpeed: 100
   pause: 0
   dailyRotation: {fileID: 8298325964873083034}
   sun: {fileID: 8298325965709542740}
@@ -80,8 +80,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  sunBaseIntensity: 1
-  sunVariation: 1.5
   moon: {fileID: 8298325965470483975}
   moonColor:
     serializedVersion: 2
@@ -112,7 +110,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  moonBaseIntensity: 0.3
   skyboxes:
   - name: earlyMorning
     skybox: {fileID: 2100000, guid: 9991b6265f7f87d43b7e3c676739f203, type: 2}
