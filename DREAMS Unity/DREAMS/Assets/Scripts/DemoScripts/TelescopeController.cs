@@ -42,7 +42,6 @@ public class TelescopeController : MonoBehaviour
     void Update()
     {
         Move();
-        print(toppart_default_angle);
     }
 
     private void Move() {
