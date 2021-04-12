@@ -27,7 +27,7 @@ public class DayNightCycle : MonoBehaviour
     private float intensity;
 
     private float sunBaseIntensity = 0.6f;
-    private float sunVariation = 1.5f;
+    private float sunVariation = 1.0f;
 
 
     [Header("Moon Light")]
