@@ -159,7 +159,7 @@ public class OVRPlayerController : MonoBehaviour
 
 	void Awake()
 	{
-		Controller = gameObject.GetComponent<CharacterController>();
+        Controller = gameObject.GetComponent<CharacterController>();
 
 		if (Controller == null)
 			Debug.LogWarning("OVRPlayerController: No CharacterController attached.");
@@ -214,7 +214,7 @@ public class OVRPlayerController : MonoBehaviour
 				return;
 		}
 		//Use keys to ratchet rotation
-		if (Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Q)) 
 			buttonRotation -= RotationRatchet;
 
 		if (Input.GetKeyDown(KeyCode.E))
