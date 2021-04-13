@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisplayPerformanceStats: 0
-  controlMode: 0
+  controlMode: 2
   pcPlayerController: {fileID: 606080864043384609}
   ovrPlayerController: {fileID: 2684322292751429406}
   pcPerformanceStats: {fileID: 8252790303379679596}
@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 3254303398700161274, guid: 1c9bfc1ae3c6cd7439b6235d54ef3565,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7421904621471171800, guid: 1c9bfc1ae3c6cd7439b6235d54ef3565,
         type: 3}

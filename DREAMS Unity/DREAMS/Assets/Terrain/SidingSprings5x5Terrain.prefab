@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1105184499339667263}
   - component: {fileID: 1105184499339667262}
   - component: {fileID: 1105184499339667261}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SidingSprings5x5Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
