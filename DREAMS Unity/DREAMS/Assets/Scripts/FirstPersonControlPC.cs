@@ -17,8 +17,7 @@ public class FirstPersonControlPC : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
-
-    public GameObject roof;
+    
 
     // Start is called before the first frame update
     void Start()

@@ -1,41 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TelescopeController : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField]
-    private GameObject midpart_connection;
+    private GameObject midpartConnection;
     [SerializeField]
-    private GameObject toppart_connection;
+    private GameObject toppartConnection;
     [SerializeField]
     [Range(0f, 100f)]
-    private int rotation_speed;
+    private int rotationSpeed;
 
     [Header("Midpart Rotation")]
     [SerializeField]
     [Range(-90f, 270f)]
-    private float midpart_minimum_angle;
+    private float midpartMinimumAngle;
     [SerializeField]
     [Range(-90f, 270f)]
-    private float midpart_maximum_angle;
+    private float midpartMaximumAngle;
 
     [Header("Toppart Rotation")]
     [SerializeField]
     [Range(-90f, 270f)]
-    private float toppart_minimum_angle;
+    private float toppartMinimumAngle;
     [SerializeField]
     [Range(-90f, 270f)]
-    private float toppart_maximum_angle;
+    private float toppartMaximumAngle;
 
-    private float midpart_default_angle, toppart_default_angle;
+    private float midpartDefaultAngle, toppartDefaultAngle;
 
     // Start is called before the first frame update
     void Start()
     {
-        midpart_default_angle = 90f;
-        toppart_default_angle = 90f;
+        midpartDefaultAngle = 90f;
+        toppartDefaultAngle = 90f;
     }
 
     // Update is called once per frame
@@ -47,26 +45,26 @@ public class TelescopeController : MonoBehaviour
     private void Move() {
 
         // Button A/B for rotating middle part
-        if (Input.GetButton("Fire1") && midpart_default_angle <= midpart_maximum_angle)
+        if (Input.GetButton("Fire1") && midpartDefaultAngle <= midpartMaximumAngle)
         {
-            midpart_connection.transform.Rotate(Vector3.left * Time.deltaTime * rotation_speed);
-            midpart_default_angle += Time.deltaTime * rotation_speed;
+            midpartConnection.transform.Rotate(Vector3.left * Time.deltaTime * rotationSpeed);
+            midpartDefaultAngle += Time.deltaTime * rotationSpeed;
         }
-        else if (Input.GetButton("Fire2") && midpart_default_angle >= midpart_minimum_angle) {
-            midpart_connection.transform.Rotate(Vector3.right * Time.deltaTime * rotation_speed);
-            midpart_default_angle -= Time.deltaTime * rotation_speed;
+        else if (Input.GetButton("Fire2") && midpartDefaultAngle >= midpartMinimumAngle) {
+            midpartConnection.transform.Rotate(Vector3.right * Time.deltaTime * rotationSpeed);
+            midpartDefaultAngle -= Time.deltaTime * rotationSpeed;
         }
 
         // Button X/Y for rotating top part
-        if (Input.GetButton("Fire3") && toppart_default_angle <= toppart_maximum_angle)
+        if (Input.GetButton("Fire3") && toppartDefaultAngle <= toppartMaximumAngle)
         {
-            toppart_connection.transform.Rotate(Vector3.up * Time.deltaTime * rotation_speed);
-            toppart_default_angle += Time.deltaTime * rotation_speed;
+            toppartConnection.transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
+            toppartDefaultAngle += Time.deltaTime * rotationSpeed;
         }
-        else if (Input.GetButton("Jump") && toppart_default_angle >= toppart_minimum_angle)
+        else if (Input.GetButton("Jump") && toppartDefaultAngle >= toppartMinimumAngle)
         {
-            toppart_connection.transform.Rotate(Vector3.down * Time.deltaTime * rotation_speed);
-            toppart_default_angle -= Time.deltaTime * rotation_speed;
+            toppartConnection.transform.Rotate(Vector3.down * Time.deltaTime * rotationSpeed);
+            toppartDefaultAngle -= Time.deltaTime * rotationSpeed;
         }
     }
 }

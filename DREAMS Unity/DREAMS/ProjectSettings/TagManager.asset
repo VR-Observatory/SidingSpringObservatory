@@ -7,6 +7,7 @@ TagManager:
   - Hands
   - Text
   - Trigger
+  - VRGlasses
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Building
   - Roof
   - Lights
-  - 
+  - Controllers
   - 
   - 
   - 
