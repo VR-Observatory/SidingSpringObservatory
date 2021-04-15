@@ -55,4 +55,6 @@ public class HeadTrigger : MonoBehaviour
         isUseTelescope = false;
         vrGlasses.transform.position = vrGlassesPosition.transform.position;
     }
+
+
 }
