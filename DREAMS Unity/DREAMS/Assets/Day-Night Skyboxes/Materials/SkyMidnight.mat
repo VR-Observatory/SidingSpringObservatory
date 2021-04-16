@@ -23,16 +23,32 @@ Material:
         m_Texture: {fileID: 2800000, guid: 1a40cbba43c28844d9d5434d798a3784, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BackTex2:
+        m_Texture: {fileID: 2800000, guid: 675b7eb08655ed44d87fc86d2d5cb154, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DownTex:
         m_Texture: {fileID: 2800000, guid: b37a0b3bf146f5748a2ae0b5856eba8f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DownTex2:
+        m_Texture: {fileID: 2800000, guid: 3b39cd44ada2c7e4582ffc0d367906f6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FrontTex:
         m_Texture: {fileID: 2800000, guid: f29a90fb9c5a19045b7f1897b30c5777, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _FrontTex2:
+        m_Texture: {fileID: 2800000, guid: 03d88a9245522804b93d275a99ae6f6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _LeftTex:
         m_Texture: {fileID: 2800000, guid: 8ccea35bb4bd8a9479b160117e0761f3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LeftTex2:
+        m_Texture: {fileID: 2800000, guid: a8bbea5efbf70dc45a0dd6325430062f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -43,11 +59,20 @@ Material:
         m_Texture: {fileID: 2800000, guid: b712a49fc11d9fd4dbf18d71b3f53e31, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RightTex2:
+        m_Texture: {fileID: 2800000, guid: 8733101b6a14ca740b346255c2d3f21f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _UpTex:
         m_Texture: {fileID: 2800000, guid: e211c2ca9055575428e0614590e7e651, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _UpTex2:
+        m_Texture: {fileID: 2800000, guid: 9d95a22c05b30774fa8556489f0c5561, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Blend: 0.16499998
     - _Exposure: 0.8
     - _Rotation: 0
     m_Colors:

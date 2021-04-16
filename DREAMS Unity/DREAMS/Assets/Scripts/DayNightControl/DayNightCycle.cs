@@ -40,17 +40,11 @@ public class DayNightCycle : MonoBehaviour
 
     [Header("Skybox")]
     public MySkybox[] skyboxes;
+    public MySkybox currentSkybox;
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float blenderValue = 0f;
 
-    private MySkybox currentSkybox;
-
-    public enum SkyboxName {
-        EARLYMORNING,
-        MORNING,
-        AFTERNOON,
-        SUNSET,
-        NIGHT,
-        MIDNIGHT
-    }
     [System.Serializable]
     public struct MySkybox {
         public string name;
@@ -59,7 +53,7 @@ public class DayNightCycle : MonoBehaviour
 
     private Dictionary<string, MySkybox> _skyDic;
 
-
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -76,7 +70,11 @@ public class DayNightCycle : MonoBehaviour
         {
             ControlTime();
             UpdataTimeScale();
-            UpdateTime();
+            UpdateTime(blenderValue);
+            //blenderValue += Time.deltaTime * _timeScale / 86400 * 2;
+            //if (blenderValue > 1) {
+            //    blenderValue = 0.0f;
+            //} 
         } 
         AdjustSun();
         SunIntensity();
@@ -89,7 +87,7 @@ public class DayNightCycle : MonoBehaviour
         _timeScale = 24 / (_dayLength / 60);
     }
 
-    private void UpdateTime()
+    private void UpdateTime(float value)
     {
          _timeOfDay += Time.deltaTime * _timeScale / 86400;
         if (_timeOfDay >= 1)
@@ -99,33 +97,31 @@ public class DayNightCycle : MonoBehaviour
         else if (_timeOfDay < 0) {
             _timeOfDay += 1;
         }
-        if (_timeOfDay > 0 && _timeOfDay < 0.3)
+        if (_timeOfDay > 0 && _timeOfDay < 0.32) 
         {
             currentSkybox = _skyDic["earlyDusk"];
         }
         else if (_timeOfDay < 0.32)
         {
-            currentSkybox = _skyDic["earlyMorning"]; 
-           
+            currentSkybox = _skyDic["earlyMorning"];
         }
         else if (_timeOfDay < 0.45)
         {
-            currentSkybox = _skyDic["brightMorning"];
-           
+            currentSkybox = _skyDic["brightMorning"]; 
         }
         else if (_timeOfDay < 0.68)
         {
             currentSkybox = _skyDic["noon"];
         }
-        else if (_timeOfDay < 0.74) 
-        { 
+        else if (_timeOfDay < 0.74)
+        {
             currentSkybox = _skyDic["earlyDusk"];
         }
-        else 
+        else
         {
             currentSkybox = _skyDic["midNight"];
         }
-
+        //currentSkybox.skybox.SetFloat("_Blend", value);
         RenderSettings.skybox = new Material(currentSkybox.skybox);
     }
 
@@ -161,4 +157,5 @@ public class DayNightCycle : MonoBehaviour
             _timeOfDay = _timeOfDay + direction * Time.deltaTime * _timeScale / 86400 * _changeSpeed;
         }
     }
+
 }
