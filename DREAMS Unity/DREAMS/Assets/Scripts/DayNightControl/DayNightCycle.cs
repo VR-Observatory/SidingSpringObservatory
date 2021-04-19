@@ -14,8 +14,6 @@ public class DayNightCycle : MonoBehaviour
     [Range(2f,1000)]
     private float _changeSpeed; // Acceleration or deceleration speed
     private float _timeScale = 100f;
-    public bool pause;
-
 
     [Header("Sun Light")]
     [SerializeField]
@@ -41,9 +39,6 @@ public class DayNightCycle : MonoBehaviour
     [Header("Skybox")]
     public MySkybox[] skyboxes;
     public MySkybox currentSkybox;
-    [SerializeField]
-    [Range(0f, 1f)]
-    private float blenderValue = 0f;
 
     [System.Serializable]
     public struct MySkybox {
@@ -66,16 +61,11 @@ public class DayNightCycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!pause)
-        {
-            ControlTime();
-            UpdataTimeScale();
-            UpdateTime(blenderValue);
-            //blenderValue += Time.deltaTime * _timeScale / 86400 * 2;
-            //if (blenderValue > 1) {
-            //    blenderValue = 0.0f;
-            //} 
-        } 
+
+        ControlTime();
+        //UpdataTimeScale();
+        //UpdateTime();
+
         AdjustSun();
         SunIntensity();
         AdjustMoon();
@@ -87,7 +77,7 @@ public class DayNightCycle : MonoBehaviour
         _timeScale = 24 / (_dayLength / 60);
     }
 
-    private void UpdateTime(float value)
+    private void UpdateTime()
     {
          _timeOfDay += Time.deltaTime * _timeScale / 86400;
         if (_timeOfDay >= 1)
@@ -121,7 +111,6 @@ public class DayNightCycle : MonoBehaviour
         {
             currentSkybox = _skyDic["midNight"];
         }
-        //currentSkybox.skybox.SetFloat("_Blend", value);
         RenderSettings.skybox = new Material(currentSkybox.skybox);
     }
 
@@ -155,6 +144,8 @@ public class DayNightCycle : MonoBehaviour
         float direction = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickVertical");
         if (direction > 0.9 || direction < -0.9) {
             _timeOfDay = _timeOfDay + direction * Time.deltaTime * _timeScale / 86400 * _changeSpeed;
+            UpdataTimeScale();
+            UpdateTime();
         }
     }
 

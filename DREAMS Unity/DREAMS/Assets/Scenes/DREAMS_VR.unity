@@ -301,6 +301,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8298325964873083029, guid: 7ff40737d5f577841a407a6382735c01,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298325964873083029, guid: 7ff40737d5f577841a407a6382735c01,
+        type: 3}
       propertyPath: _dayLength
       value: 10
       objectReference: {fileID: 0}
@@ -3110,6 +3115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: APT Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747916220082535002, guid: d9d928accc6bc8342aa9ddeab28f045d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8951055739093263250, guid: d9d928accc6bc8342aa9ddeab28f045d,
         type: 3}
