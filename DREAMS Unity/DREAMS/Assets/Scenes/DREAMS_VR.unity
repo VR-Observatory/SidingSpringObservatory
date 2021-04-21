@@ -1520,7 +1520,7 @@ MonoBehaviour:
   selectedRoadRightInnerOffset: 0
   selectedCrossingMaterial: 0
   crossingTextureInfoIndex: 0
-  handleSelection: 1
+  handleSelection: 0
   positionHandleSelection: 1
   markerDirXZ: 0
   defaultCrossing: {fileID: 0}
@@ -1575,7 +1575,7 @@ MonoBehaviour:
   - Splat 1 - ground02
   - Splat 2 - GroundStones01
   - Splat 3 - ground01
-  activeTerrain: {fileID: 796017583}
+  activeTerrain: {fileID: 0}
   activeTerrainY: -686.97
   selectedTerrain: 0
   selectedRoadsOnly: 0
@@ -22502,7 +22502,7 @@ PrefabInstance:
     - target: {fileID: 606080864420237031, guid: 29c7c6777d353524789d1bbecc7c353b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -7.19
       objectReference: {fileID: 0}
     - target: {fileID: 606080864420237031, guid: 29c7c6777d353524789d1bbecc7c353b,
         type: 3}
