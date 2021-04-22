@@ -194,15 +194,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2558879383727168163}
-  canFly: 0
-  speed: 7
+  canFly: 1
+  baseSpeed: 6
+  sprintFactor: 1.75
   gravity: -9.81
+  jumpHeight: 1.5
   groundCheck: {fileID: 2558879383578264621}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 512
-  roof: {fileID: 0}
+  buildingMask:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!1001 &6443526704910448910
 PrefabInstance:
   m_ObjectHideFlags: 0

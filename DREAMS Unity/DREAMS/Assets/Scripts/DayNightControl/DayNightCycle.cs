@@ -141,9 +141,8 @@ public class DayNightCycle : MonoBehaviour
     // fast forward and backward
     private void ControlTime() {
         // PrimaryThumbstickVertical, down/e for fast forwad, up/q for backforward
-        float direction = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickVertical");
-        if (direction > 0.9 || direction < -0.9) {
-            _timeOfDay = _timeOfDay + direction * Time.deltaTime * _timeScale / 86400 * _changeSpeed;
+        if (Input.GetAxis("Day/Night") > 0.9) {
+            _timeOfDay = _timeOfDay + Time.deltaTime * _timeScale / 86400 * _changeSpeed;
             UpdataTimeScale();
             UpdateTime();
         }

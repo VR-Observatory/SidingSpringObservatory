@@ -39,10 +39,13 @@ public class OVRPlayerController : MonoBehaviour
 	/// </summary>
 	public float JumpForce = 0.3f;
 
-	/// <summary>
-	/// The rate of rotation when using a gamepad.
-	/// </summary>
-	public float RotationAmount = 1.5f;
+    // sprint speed
+    public float sprintFactor = 1.75f;
+
+    /// <summary>
+    /// The rate of rotation when using a gamepad.
+    /// </summary>
+    public float RotationAmount = 1.5f;
 
 	/// <summary>
 	/// The rate of rotation when using the keyboard.
@@ -213,6 +216,7 @@ public class OVRPlayerController : MonoBehaviour
 			else
 				return;
 		}
+
 		//Use keys to ratchet rotation
 		if (Input.GetKeyDown(KeyCode.Q)) 
 			buttonRotation -= RotationRatchet;
@@ -374,11 +378,15 @@ public class OVRPlayerController : MonoBehaviour
 
 			moveInfluence = Acceleration * 0.1f * MoveScale * MoveScaleMultiplier;
 
-#if !UNITY_ANDROID // LeftTrigger not avail on Android game pad
-			moveInfluence *= 1.0f + OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger);
-#endif
+            //#if !UNITY_ANDROID // LeftTrigger not avail on Android game pad
+            //moveInfluence *= 1.0f + OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger);
+            //#endif
 
-			Vector2 primaryAxis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+            // sprint
+            if (Input.GetButton("Sprint"))
+                moveInfluence *= sprintFactor;
+
+            Vector2 primaryAxis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
 
 			// If speed quantization is enabled, adjust the input to the number of fixed speed steps.
 			if (FixedSpeedSteps > 0)

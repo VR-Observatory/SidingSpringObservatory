@@ -45,23 +45,23 @@ public class TelescopeController : MonoBehaviour
     private void Move() {
 
         // Button A/B for rotating middle part
-        if (Input.GetButton("Fire1") && midpartDefaultAngle <= midpartMaximumAngle)
+        if (Input.GetButton("Telescope Mid Rotate Pos") && midpartDefaultAngle <= midpartMaximumAngle)
         {
             midpartConnection.transform.Rotate(Vector3.left * Time.deltaTime * rotationSpeed);
             midpartDefaultAngle += Time.deltaTime * rotationSpeed;
         }
-        else if (Input.GetButton("Fire2") && midpartDefaultAngle >= midpartMinimumAngle) {
+        else if (Input.GetButton("Telescope Mid Rotate Neg") && midpartDefaultAngle >= midpartMinimumAngle) {
             midpartConnection.transform.Rotate(Vector3.right * Time.deltaTime * rotationSpeed);
             midpartDefaultAngle -= Time.deltaTime * rotationSpeed;
         }
 
         // Button X/Y for rotating top part
-        if (Input.GetButton("Fire3") && toppartDefaultAngle <= toppartMaximumAngle)
+        if (Input.GetButton("Telescope Top Rotate Pos") && toppartDefaultAngle <= toppartMaximumAngle)
         {
             toppartConnection.transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
             toppartDefaultAngle += Time.deltaTime * rotationSpeed;
         }
-        else if (Input.GetButton("Jump") && toppartDefaultAngle >= toppartMinimumAngle)
+        else if (Input.GetButton("Telescope Top Rotate Neg") && toppartDefaultAngle >= toppartMinimumAngle)
         {
             toppartConnection.transform.Rotate(Vector3.down * Time.deltaTime * rotationSpeed);
             toppartDefaultAngle -= Time.deltaTime * rotationSpeed;
