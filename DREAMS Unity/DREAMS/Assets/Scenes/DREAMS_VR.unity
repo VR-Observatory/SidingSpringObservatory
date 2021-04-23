@@ -22040,7 +22040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999511179}
   m_Layer: 0
-  m_Name: Uppsala Schmidt Telescope
+  m_Name: UppsalaSchmidtTelescope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
