@@ -140,9 +140,10 @@ public class DayNightCycle : MonoBehaviour
 
     // fast forward and backward
     private void ControlTime() {
-        // PrimaryThumbstickVertical, down/e for fast forwad, up/q for backforward
-        if (Input.GetAxis("Day/Night") > 0.9) {
-            _timeOfDay = _timeOfDay + Time.deltaTime * _timeScale / 86400 * _changeSpeed;
+        // Day/Night,  left alt for fast forwad, left ctrl for backforward
+        float direction = Input.GetAxis("Day/Night");
+        if ( direction > 0.9 || direction < -0.9) {
+            _timeOfDay = _timeOfDay + direction * Time.deltaTime * _timeScale / 86400 * _changeSpeed;
             UpdataTimeScale();
             UpdateTime();
         }
