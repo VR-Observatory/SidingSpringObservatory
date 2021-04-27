@@ -45663,6 +45663,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6076211576792631694, guid: 55189530c41bd2648ad10f9c13ee1b7a,
+        type: 3}
+      propertyPath: m_TreeDistance
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076211576792631694, guid: 55189530c41bd2648ad10f9c13ee1b7a,
+        type: 3}
+      propertyPath: m_DetailObjectDistance
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6076211576792631695, guid: 55189530c41bd2648ad10f9c13ee1b7a,
         type: 3}
       propertyPath: m_Name
