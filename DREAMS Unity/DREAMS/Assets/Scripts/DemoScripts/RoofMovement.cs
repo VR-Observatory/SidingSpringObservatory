@@ -22,7 +22,7 @@ public class RoofMovement : MonoBehaviour
     {
         if ((roof_animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !roof_animator.IsInTransition(0)))
         {
-            if (Input.GetAxis("Open Roof") > 0.9)
+            if (Input.GetButton("Open Roof"))
             {
                 roof_animator.SetBool("Move", !roof_animator.GetBool("Move"));
             }

@@ -383,7 +383,7 @@ public class OVRPlayerController : MonoBehaviour
             //#endif
 
             // sprint
-            if (Input.GetButton("Sprint"))
+            if (Input.GetAxis("Sprint") > 0.5)
                 moveInfluence *= sprintFactor;
 
             Vector2 primaryAxis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
