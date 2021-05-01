@@ -152,7 +152,10 @@ public class OVRPlayerController : MonoBehaviour
 	private bool ReadyToSnapTurn; // Set to true when a snap turn has occurred, code requires one frame of centered thumbstick to enable another snap turn.
 	private bool playerControllerEnabled = false;
 
-	void Start()
+    [SerializeField]
+    private Animator hintAnimator;
+
+    void Start()
 	{
 		// Add eye-depth as a camera offset from the player controller
 		var p = CameraRig.transform.localPosition;
@@ -223,6 +226,14 @@ public class OVRPlayerController : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.E))
 			buttonRotation += RotationRatchet;
+
+        //hide or show menu
+        if (Input.GetButtonDown("Oculus_CrossPlatform_SecondaryThumbstick")) {
+            if (hintAnimator.GetBool("Hint") == true)
+                hintAnimator.SetBool("Hint", false);
+            else
+                hintAnimator.SetBool("Hint", true);
+        }
 	}
 
 	protected virtual void UpdateController()

@@ -54,6 +54,7 @@ public class HeadTrigger : MonoBehaviour
         telescopeOVRCamera.SetActive(false);
         isUseTelescope = false;
         vrGlasses.transform.position = vrGlassesPosition.transform.position;
+        vrGlasses.transform.rotation = vrGlassesPosition.transform.rotation;
     }
 
 
