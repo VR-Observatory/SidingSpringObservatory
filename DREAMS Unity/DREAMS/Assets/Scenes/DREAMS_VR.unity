@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -51066,6 +51066,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 283794256681307550, guid: d9d928accc6bc8342aa9ddeab28f045d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 97c778629b6490e48a8d8f5b02158ce4, type: 2}
     - target: {fileID: 403199648277799123, guid: d9d928accc6bc8342aa9ddeab28f045d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51235,6 +51240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 3.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245315204809476050, guid: d9d928accc6bc8342aa9ddeab28f045d,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6292143530620785325, guid: d9d928accc6bc8342aa9ddeab28f045d,
         type: 3}

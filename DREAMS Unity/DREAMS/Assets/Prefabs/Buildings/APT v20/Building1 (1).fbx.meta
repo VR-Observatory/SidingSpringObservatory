@@ -3,7 +3,47 @@ guid: 8c7e70b5d513058439fce925c777e0b0
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 255,255,255
+    second: {fileID: 2100000, guid: 8dfc3626903e1e842b7e66c57d1a9bd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick
+    second: {fileID: 2100000, guid: d43a7e712a598fb4ebdb9831e601f937, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete
+    second: {fileID: 2100000, guid: f35fe5cb9b06ee84dafd495bd27033b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ext First Lighy
+    second: {fileID: 2100000, guid: 41823e04405193540b3918f0f90da187, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ext White
+    second: {fileID: 2100000, guid: 7d8af41bcc5c6e043bd66965e0434412, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Int White
+    second: {fileID: 2100000, guid: 5390ca8dd2828cf48942660a0191cb30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stainless
+    second: {fileID: 2100000, guid: d4e2e7990e30f9848a833d21800a8d06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stainless Ext
+    second: {fileID: 2100000, guid: 06b568880db4c994b8155703c79df5e7, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -45,7 +85,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
