@@ -13,6 +13,7 @@ public class FirstPersonControlPC : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
+    public GameObject keyboardInfo;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -28,11 +29,15 @@ public class FirstPersonControlPC : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+        keyboardInfo.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("ToggleMenu"))
+            keyboardInfo.SetActive(!keyboardInfo.activeSelf);
+
         if (Input.GetButton("Sprint"))
             speed = sprintFactor * baseSpeed;
         else
