@@ -25880,7 +25880,7 @@ PrefabInstance:
     - target: {fileID: 5797572789314824004, guid: 29c7c6777d353524789d1bbecc7c353b,
         type: 3}
       propertyPath: isDisplayPerformanceStats
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6009179244779138840, guid: 29c7c6777d353524789d1bbecc7c353b,
         type: 3}
