@@ -12,6 +12,7 @@ permissions and limitations under the License.
 
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controls the player's movement in virtual reality.
@@ -204,7 +205,10 @@ public class OVRPlayerController : MonoBehaviour
 
 	void Update()
 	{
-		if (!playerControllerEnabled)
+        if (Input.GetKeyDown(KeyCode.JoystickButton6))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        if (!playerControllerEnabled)
 		{
 			if (OVRManager.OVRManagerinitialized)
 			{
@@ -454,11 +458,14 @@ public class OVRPlayerController : MonoBehaviour
 			{
 				if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickLeft) ||
 					(RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickLeft)))
-				{
-					if (ReadyToSnapTurn)
-					{
-						euler.y -= RotationRatchet;
-						ReadyToSnapTurn = false;
+                //if(Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal") <= -0.5f)
+                {
+                    if (ReadyToSnapTurn)
+                    {
+                        euler.y -= RotationRatchet;
+                    //euler.y -= 50 * Time.deltaTime;
+                    //print(Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal"));
+                        ReadyToSnapTurn = false;
 					}
 				}
 				else if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickRight) ||
