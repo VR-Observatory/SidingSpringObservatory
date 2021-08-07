@@ -1,6 +1,6 @@
 # 2021-S1-2-C | Virtual Reality Rendition of the DREAMS Telescope | ANU Techlauncher
 
-**For more info and documentation, see our [landing page](https://sites.google.com/view/2021-s1-techlauncher-dreams/home)**
+**For more info and documentation, see our [landing page](https://sites.google.com/view/2021-s2-techlauncher-dreams/home)**
 
 ### Overview
 We aim to create a virtual version (VR) of the telescope for outreach and educational purposes.  The experience will run on the Oculus Quest VR headset, where users will be able to examine a model of the telescope itself.  Basic movement and interactions will be a part of the experience.
@@ -12,8 +12,10 @@ Our project will be valuable to educational institions, engineers and researcher
 The DREAMS telescope is the next in a series of telescopes being brought to Virtual Reality.  A previous Techlauncher group worked on the Giant Magellan Telescope (GMT) in 2020, and we will be using some of thier source code as a starting point.
 
 ### Links
-[Project Landing Page - Information About our Project](https://sites.google.com/view/2021-s1-techlauncher-dreams/home)
+[Project Landing Page - Information About our Project](https://sites.google.com/view/2021-s2-techlauncher-dreams/home)
 
 [Google Drive - Documentation & Assets](https://drive.google.com/drive/folders/1rxuu53fC7sdDQ-8IuXaFRbKkWeSXq4gD?usp=sharing)
 
 [Trello - Kanban Style Development Board](https://trello.com/b/t7usLZgQ/vr-dreams-telescope)
+
+[2021 Semester 1 Project Landing Page (old) - Information About our Project](https://sites.google.com/view/2021-s1-techlauncher-dreams/home)
