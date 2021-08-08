@@ -19,3 +19,16 @@ The DREAMS telescope is the next in a series of telescopes being brought to Virt
 [Trello - Kanban Style Development Board](https://trello.com/b/t7usLZgQ/vr-dreams-telescope)
 
 [2021 Semester 1 Project Landing Page (old) - Information About our Project](https://sites.google.com/view/2021-s1-techlauncher-dreams/home)
+
+### Document Description
+All main Unity files is stroed in 2021_s1_anu_dreams_techlauncher/DREAMS_Unity/DREAMS/Assets, this folder mainly includes:
+
+	- Animation (All animation and animator for objects)
+	- Materials (All materials and texture including images used for material)
+	- NonPrefabsResourses (All resourses which not mainly prefabs but might include prefabs inside, for example Oculus SDK)
+	- Prefabs (All models and object resourses including Terrain, furniture, Telescope...)
+	- Resources (NOT INCLUDE object resources, INCLUDE Platform Setting)
+	- Scenes (All demo scenes and main scene)
+	- Scripts (Most coding files used in scene, other files can be found in NonPrefabsResources)
+	- TextMesh Pro (All files for Text Setting)
+	- XR (All XR settings)
