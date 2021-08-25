@@ -24304,18 +24304,6 @@ MonoBehaviour:
   perpDirRotated: {x: -0.019926216, y: 0, z: 0.99980146}
   markerStartUVY: 0.3432846
   customPoints: []
---- !u!114 &1881395679 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7523059266572531551, guid: 29c7c6777d353524789d1bbecc7c353b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2099266392}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1923159752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26167,6 +26155,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7523059266572531551, guid: 29c7c6777d353524789d1bbecc7c353b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938212515763953948, guid: 29c7c6777d353524789d1bbecc7c353b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938212515763953948, guid: 29c7c6777d353524789d1bbecc7c353b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938212515763953948, guid: 29c7c6777d353524789d1bbecc7c353b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1447677681}
+    - target: {fileID: 7938212515763953948, guid: 29c7c6777d353524789d1bbecc7c353b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938212515763953948, guid: 29c7c6777d353524789d1bbecc7c353b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RoofAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938212515763953948, guid: 29c7c6777d353524789d1bbecc7c353b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
@@ -50469,7 +50487,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mobileOpenRoofButton
       value: 
-      objectReference: {fileID: 1881395679}
+      objectReference: {fileID: 0}
     - target: {fileID: 8747916220082535002, guid: d9d928accc6bc8342aa9ddeab28f045d,
         type: 3}
       propertyPath: m_Name
