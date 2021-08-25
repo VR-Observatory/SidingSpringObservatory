@@ -25973,6 +25973,11 @@ PrefabInstance:
       propertyPath: vrGlassesPosition.z
       value: -0.7593
       objectReference: {fileID: 0}
+    - target: {fileID: 7200789544418094081, guid: 29c7c6777d353524789d1bbecc7c353b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7368955437463014697, guid: 29c7c6777d353524789d1bbecc7c353b,
         type: 3}
       propertyPath: m_Layer
@@ -27398,7 +27403,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 16
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6983875685272244888, guid: 29c7c6777d353524789d1bbecc7c353b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29c7c6777d353524789d1bbecc7c353b, type: 3}
 --- !u!1 &2122787765
 GameObject:

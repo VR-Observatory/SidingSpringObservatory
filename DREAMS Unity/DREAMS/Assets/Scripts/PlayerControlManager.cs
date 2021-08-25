@@ -8,15 +8,20 @@ public class PlayerControlManager : MonoBehaviour
     {
         PC,
         OVR,
+        AndroidMobile,
         Auto
     }
     public bool isDisplayPerformanceStats = false;
 
     public controlModes controlMode;
+
     public GameObject pcPlayerController;
     public GameObject ovrPlayerController;
+    public GameObject androidMobilePlayerController;
+
     public GameObject pcPerformanceStats;
     public GameObject ovrPerformanceStats;
+    // public GameObject androidMobilePerformanceStats;
 
     // Start is called before the first frame update
     void Start()
@@ -29,9 +34,14 @@ public class PlayerControlManager : MonoBehaviour
             case controlModes.OVR:
                 ActivateControlOVR();
                 break;
+            case controlModes.AndroidMobile:
+                ActivateControlAndroidMobile();
+                break;
             default:
                 if (OVRManager.isHmdPresent)
                     ActivateControlOVR();
+                else if (Application.platform == RuntimePlatform.Android)
+                    ActivateControlAndroidMobile();
                 else
                     ActivateControlPC();
                 break;
@@ -42,6 +52,7 @@ public class PlayerControlManager : MonoBehaviour
     {
         pcPlayerController.SetActive(true);
         ovrPlayerController.SetActive(false);
+        androidMobilePlayerController.SetActive(false);
 
         pcPerformanceStats.SetActive(isDisplayPerformanceStats);
     }
@@ -49,7 +60,16 @@ public class PlayerControlManager : MonoBehaviour
     {
         pcPlayerController.SetActive(false);
         ovrPlayerController.SetActive(true);
+        androidMobilePlayerController.SetActive(false);
 
         ovrPerformanceStats.SetActive(isDisplayPerformanceStats);
+    }
+    void ActivateControlAndroidMobile()
+    {
+        pcPlayerController.SetActive(false);
+        ovrPlayerController.SetActive(false);
+        androidMobilePlayerController.SetActive(true);
+
+        // androidMobilePerformanceStats.SetActive(isDisplayPerformanceStats);
     }
 }

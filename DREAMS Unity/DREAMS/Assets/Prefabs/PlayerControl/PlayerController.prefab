@@ -30,6 +30,7 @@ Transform:
   m_Children:
   - {fileID: 2343733048058456860}
   - {fileID: 1795531170769755564}
+  - {fileID: 157914486699147564}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49,6 +50,7 @@ MonoBehaviour:
   controlMode: 2
   pcPlayerController: {fileID: 6165126403083429831}
   ovrPlayerController: {fileID: 3268108661617275979}
+  androidMobilePlayerController: {fileID: 9157271063771470796}
   pcPerformanceStats: {fileID: 8252790303379679596}
   ovrPerformanceStats: {fileID: 790279757293144699}
 --- !u!1 &3268108661617275979
@@ -112,6 +114,37 @@ Transform:
   - {fileID: 606080864043384614}
   m_Father: {fileID: 606080864420237031}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9157271063771470796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 157914486699147564}
+  m_Layer: 0
+  m_Name: AndroidMobile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &157914486699147564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157271063771470796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7842973166836075852}
+  m_Father: {fileID: 606080864420237031}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &606080864417413092
 PrefabInstance:
@@ -231,6 +264,86 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 188755451605761439, guid: 1c9bfc1ae3c6cd7439b6235d54ef3565,
     type: 3}
   m_PrefabInstance: {fileID: 606080864417413092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1904155770609412429
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 157914486699147564}
+    m_Modifications:
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555499121144783878, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_Name
+      value: AndroidMobileController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755767770782369100, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 64795af3c551fe9458f58e98e2090a60, type: 3}
+--- !u!4 &7842973166836075852 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+    type: 3}
+  m_PrefabInstance: {fileID: 1904155770609412429}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3164847911755801988
 PrefabInstance:
