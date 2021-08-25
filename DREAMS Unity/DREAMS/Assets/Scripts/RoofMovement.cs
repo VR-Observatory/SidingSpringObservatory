@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoofMovement : MonoBehaviour
 {
@@ -15,17 +16,14 @@ public class RoofMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RoofAnimation();
+        if (Input.GetButton("Open Roof"))
+            RoofAnimation();
     }
-
-    private void RoofAnimation()
+    public void RoofAnimation()
     {
         if ((roof_animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !roof_animator.IsInTransition(0)))
         {
-            if (Input.GetButton("Open Roof"))
-            {
-                roof_animator.SetBool("Move", !roof_animator.GetBool("Move"));
-            }
+            roof_animator.SetBool("Move", !roof_animator.GetBool("Move"));
         }
     }
 }
