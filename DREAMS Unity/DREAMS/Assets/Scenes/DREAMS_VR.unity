@@ -26009,6 +26009,11 @@ PrefabInstance:
       propertyPath: vrGlassesPosition.z
       value: -0.7593
       objectReference: {fileID: 0}
+    - target: {fileID: 7119092072443600246, guid: 29c7c6777d353524789d1bbecc7c353b,
+        type: 3}
+      propertyPath: axisOptions
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7200789544418094081, guid: 29c7c6777d353524789d1bbecc7c353b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -27403,6 +27408,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482286702758615052, guid: 29c7c6777d353524789d1bbecc7c353b,
+        type: 3}
+      propertyPath: axisOptions
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8799095542050504128, guid: 29c7c6777d353524789d1bbecc7c353b,
         type: 3}
