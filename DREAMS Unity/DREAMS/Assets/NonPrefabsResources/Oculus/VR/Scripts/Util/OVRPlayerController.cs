@@ -456,17 +456,17 @@ public class OVRPlayerController : MonoBehaviour
 
 			if (SnapRotation)
 			{
-				if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickLeft) ||
-					(RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickLeft)))
-                //if(Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal") <= -0.5f)
+				//if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickLeft) ||
+					//(RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickLeft)))
+                if(Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal") <= -0.5f)
                 {
-                    if (ReadyToSnapTurn)
-                    {
-                        euler.y -= RotationRatchet;
-                    //euler.y -= 50 * Time.deltaTime;
+                    //if (ReadyToSnapTurn)
+                    //{
+                        //euler.y -= RotationRatchet;
+                    euler.y -= 50 * Time.deltaTime;
                     //print(Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal"));
-                        ReadyToSnapTurn = false;
-					}
+                        //ReadyToSnapTurn = false;
+					//}
 				}
 				else if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickRight) ||
 					(RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickRight)))
