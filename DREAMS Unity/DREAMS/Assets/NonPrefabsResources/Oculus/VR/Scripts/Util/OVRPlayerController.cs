@@ -156,6 +156,9 @@ public class OVRPlayerController : MonoBehaviour
     [SerializeField]
     private Animator hintAnimator;
 
+    //rotation mode 0 = step, 1 = smooth
+    private int rotationMode = 0;
+
     void Start()
 	{
 		// Add eye-depth as a camera offset from the player controller
@@ -453,34 +456,46 @@ public class OVRPlayerController : MonoBehaviour
 			if (!SkipMouseRotation)
 				euler.y += Input.GetAxis("Mouse X") * rotateInfluence * 3.25f;
 #endif
-
+            //Add switch rotation mode
 			if (SnapRotation)
 			{
-				//if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickLeft) ||
-					//(RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickLeft)))
-                if(Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal") <= -0.5f)
+                if (rotationMode == 0)
                 {
-                    //if (ReadyToSnapTurn)
-                    //{
-                        //euler.y -= RotationRatchet;
-                    euler.y -= 50 * Time.deltaTime;
-                    //print(Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal"));
-                        //ReadyToSnapTurn = false;
-					//}
-				}
-				else if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickRight) ||
-					(RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickRight)))
-				{
-					if (ReadyToSnapTurn)
-					{
-						euler.y += RotationRatchet;
-						ReadyToSnapTurn = false;
-					}
-				}
-				else
-				{
-					ReadyToSnapTurn = true;
-				}
+                    if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickLeft) ||
+                                        (RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickLeft)))
+                    {
+                        if (ReadyToSnapTurn)
+                        {
+                            euler.y -= RotationRatchet;
+
+                            print(Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal"));
+                            ReadyToSnapTurn = false;
+                        }
+                    }
+                    else if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickRight) ||
+                   (RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickRight)))
+                    {
+                        if (ReadyToSnapTurn)
+                        {
+                            euler.y += RotationRatchet;
+                            ReadyToSnapTurn = false;
+                        }
+                    }
+                    else
+                    {
+                        ReadyToSnapTurn = true;
+                    }
+                }
+                else {
+                    if (Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal") <= -0.5f)
+                    {
+                        euler.y -= 50 * Time.deltaTime;
+                    }
+                    else if (Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickHorizontal") >= 0.5f) {
+                        euler.y += 50 * Time.deltaTime;
+                    }
+                }
+				
 			}
 			else
 			{
@@ -634,4 +649,13 @@ public class OVRPlayerController : MonoBehaviour
 			transform.rotation = Quaternion.Euler(euler);
 		}
 	}
+
+    public void SwitchRotationMode()
+    {
+        if (rotationMode == 0)
+            rotationMode = 1;
+        else
+            rotationMode = 0;
+
+    }
 }

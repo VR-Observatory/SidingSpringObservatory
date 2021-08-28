@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class TelescopeController : MonoBehaviour
 {
@@ -28,18 +30,31 @@ public class TelescopeController : MonoBehaviour
     private float toppartMaximumAngle;
 
     private float midpartDefaultAngle, toppartDefaultAngle;
+    public float sliderValue;
+    public Slider slider;
 
     // Start is called before the first frame update
     void Start()
     {
         midpartDefaultAngle = 90f;
         toppartDefaultAngle = 90f;
+
+        slider.minValue = midpartMinimumAngle;
+        slider.maxValue = midpartMaximumAngle;
+
+        slider.onValueChanged.AddListener(rotateUpdate);
+    }
+
+    private void rotateUpdate(float value)
+    {
+        midpartConnection.transform.localEulerAngles = new Vector3(midpartConnection.transform.localEulerAngles.x,-value,midpartConnection.transform.localEulerAngles.z);
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
+        print(midpartConnection.transform.localEulerAngles);
     }
 
     private void Move() {
@@ -66,5 +81,9 @@ public class TelescopeController : MonoBehaviour
             toppartConnection.transform.Rotate(Vector3.down * Time.deltaTime * rotationSpeed);
             toppartDefaultAngle -= Time.deltaTime * rotationSpeed;
         }
+    }
+
+    public void MidpartUIMove() {
+
     }
 }
