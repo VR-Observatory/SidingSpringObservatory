@@ -82,24 +82,24 @@ public class TelescopeController : MonoBehaviour
     {
 
         // Button A/B for rotating middle part
-        if (telescopeSlider1.Vertical > sliderThreshold && midpartDefaultAngle <= midpartMaximumAngle)
+        if (telescopeSlider1.Horizontal > sliderThreshold && midpartDefaultAngle <= midpartMaximumAngle)
         {
             midpartConnection.transform.Rotate(Vector3.left * Time.deltaTime * rotationSpeed);
             midpartDefaultAngle += Time.deltaTime * rotationSpeed;
         }
-        else if (telescopeSlider1.Vertical < -sliderThreshold && midpartDefaultAngle >= midpartMinimumAngle)
+        else if (telescopeSlider1.Horizontal < -sliderThreshold && midpartDefaultAngle >= midpartMinimumAngle)
         {
             midpartConnection.transform.Rotate(Vector3.right * Time.deltaTime * rotationSpeed);
             midpartDefaultAngle -= Time.deltaTime * rotationSpeed;
         }
 
         // Button X/Y for rotating top part
-        if (telescopeSlider2.Vertical > sliderThreshold && toppartDefaultAngle <= toppartMaximumAngle)
+        if (telescopeSlider2.Horizontal > sliderThreshold && toppartDefaultAngle <= toppartMaximumAngle)
         {
             toppartConnection.transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
             toppartDefaultAngle += Time.deltaTime * rotationSpeed;
         }
-        else if (telescopeSlider2.Vertical < -sliderThreshold && toppartDefaultAngle >= toppartMinimumAngle)
+        else if (telescopeSlider2.Horizontal < -sliderThreshold && toppartDefaultAngle >= toppartMinimumAngle)
         {
             toppartConnection.transform.Rotate(Vector3.down * Time.deltaTime * rotationSpeed);
             toppartDefaultAngle -= Time.deltaTime * rotationSpeed;
