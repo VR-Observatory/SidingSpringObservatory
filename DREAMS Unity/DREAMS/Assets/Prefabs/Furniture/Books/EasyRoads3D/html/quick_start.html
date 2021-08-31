@@ -54,8 +54,8 @@
 	      <p class="style1">To create a new road, click the second tab from the left <img src="../images/roads_tab.jpg" width="53" height="29" style="vertical-align:middle"> . Select the <a href="#" class="link">preset road</a> from the dropdown and and click the <strong>Add New Object</strong> button. A new game object will be created  in<strong> Road Network / Road Objects</strong></p>
 	      <p class="style1">1) Hold SHIFT and click in the scene to add markers. The road will appear after adding two markers. Clicking in the scene will deselect the road. Clicking one of the marker handles will reselect the road object. More markers can be added by holding SHIFT and click</p>
 	      <p class="style1">2) Markers can be inserted between other markers by moving the mouse to the new marker position and hitting the I key. </p>
-	      <p class="style1">3) Markers can be removed by hitting Shift + R, </p>
-	      <p class="style1">4) Marker positions can be changed by selecting the marker, it will light up and become green after clicking it. You can select the traditional position handle or  the rectangle move handle by pressing the W key (Position handle) or M key (Move handle). </p>
+	      <p class="style1">3) Markers can be removed by hitting the R key. </p>
+	      <p class="style1">4) You can change marker positions by selecting the marker, it will light up and become green after clicking it. You can select the traditional position handle or  the rectangle move handle by pressing the W key (Position handle) or M key (Move handle). </p>
 	      <p class="style1">5) Multiple markers can be selected and edited by holding the Shift key when selecting markers.</p>
 	      <p class="style1">These are the basics for road creation.</p>
 	      <p class="style1">- <a href="scene.html#roads" class="link">Click here</a> for additional road options in the scene, <a href="http://www.unityterraintools.com/tutorials/road_tools.php" class="link">tutorials</a><br>
@@ -68,14 +68,14 @@
 	      <p class="style1">2) Select the prefab you want to add to the scene</p>
 	      <p class="style1">3) Hold SHIFT and click in the scene where you want to position it. The crossing will be instantiated.</p>
 	      <p class="style1">As long as no other action was done, like selecting a road or moving the crossing, multiple crossings of the same type can be added by repeating step 3).</p>
-	      <p class="style1">4) Green handles will be visible in the center of each crossing connection. Roads can be pulled out of the connections by moving the mouse to one of the green handles, hold the left mouse button down and drag. </p>
+	      <p class="style1">4) You will see green handles in the center of each crossing connection. Roads can be pulled out of the connections by moving the mouse to one of the green handles, hold the left mouse button down and drag. </p>
 	      <p class="style1">5) Roads can be  created instantly between crossings this way. Hold the left mouse button down and drag to the other crossing connection. The road will snap to the other crossing.</p>
 	      <p class="style1">6) Existing roads in the scene can be connected the same way provided that the shape matches the connections shape. The connection handle will turn red if this is not the case. Select the first / last marker of the road and move it to one of the green connection handles, it will snap to the connection. </p>
-	      <p class="style1">7) As mentioned above, when a marker is selected, the connections tab will display matching crossing /connection prefabs. Pressing the prefab will attach it to the start or end of the road or insert it between road sections. This will result in the road being split in two roads sections.</p>
-	      <p class="style1">8) Crossing / connection prefabs can also be inserted by moving a marker over another road segment. When a matching prefab exist the snap position will be highlighted in blue. Releasing the mouse button will insert the prefab that matches the involved road types best.</p>
-	      <p class="style1">9) Crossings can be moved by clicking on the yellow sphere handle in the center. Just like with markers  the crossing can be moved with the traditional position handle (W key) or the rectangle move handle (M key). Additionally you can also rotate the crossing, click the E key to activate the rotation handle.	      </p>
+	      <p class="style1">7) As mentioned above, when a marker is selected, the connections tab will display matching crossing /connection prefabs. Pressing the prefab will attach it to the starrt or end of the road or insert it between road sections. This will result in the road being split in two roads sections.</p>
+	      <p class="style1">8) Crossing / connection prefabs can also be insertet by moving a marker over another road segment. When a matching prefab exist the snap position will be highlighted in blue. Releasing the mouse button will insert the prefab with the closes match based on the involved road types.</p>
+	      <p class="style1">9) You can move  crossings by clicking on the yellow sphere handle in the center. Just like with markers you can move the crossing with the traditional position handle (W key) or the rectangle move handle (M key). Additionally you can also rotate the crossing, click the E key to activate the rotation handle.	      </p>
 	      <p class="style1">10) Alternatively,
-	      intersections can also be added to the start or end of the road. Select the first or last marker of the road you  created earlier. A list of available crossing prefabs will be displayed in the Inspector. Click the prefab   you want to attach to the selected marker. It will automatically attach to the selected marker. Intersections can also be auto inserted when snapping roads together by moving a marker over another road section and when a blue circle is displayed. This means a matching intersections prefab for the involved roads is available and can be auto inserted.</p>
+	      Intersections can also be added to the start or end of the road. Select the first or last marker of the road you  created earlier. A list of available crossing prefabs will be displayed in the Inspector. Click the prefab   you want to attach to the selected marker. It will automatically attach to the selected marker.</p>
 	      <p class="style1">- <a href="intersections.html" class="link">Click here</a> for additional crossing prefab options in the scene<br>
 - <a href="general_settings.html#sceneprefabs" class="link">Click here</a> for more information about setting up crossing prefab types</p>
 	      <p class="style1">&nbsp;</p>
@@ -98,13 +98,11 @@
 	        <strong>Recommended Reads:</strong></p>
 	      <p class="style1">- <a href="general_settings.html#create" class="link">road types</a><br>
 	        - <a href="scene.html#roads" class="link">road options</a><br>
-          - <a href="general_settings.html#newConnectionPrefab" class="link">creating road type specific dynamic crossings<br>
-          </a>- <a href="general_settings.html#sceneprefabs" class="link">creating dynamic crossings</a><br>
+	        - <a href="general_settings.html#sceneprefabs" class="link">creating dynamic crossings</a><br>
 	        - <a href="general_settings.html#customcrossings" class="link">creating custom crossings / road elements</a><br>
 	        - <a href="intersections.html" class="link">adjusting crossings in the scene</a><br>
 	        - <a href="side_objects.html" class="link">side objects</a><br>
-          - <a href="general_settings.html#crossingProps" class="link">importing road data <br>
-          </a>- <a href="shortcuts.html" class="link">Hotkeys &amp; Scene Operations</a></p>
+          - <a href="general_settings.html#crossingProps" class="link">importing road data </a></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p></td>

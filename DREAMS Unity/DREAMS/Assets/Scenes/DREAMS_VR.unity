@@ -887,7 +887,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233384046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 721158641}
@@ -1907,7 +1907,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613854683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 675682768}
@@ -2117,7 +2117,28 @@ MonoBehaviour:
   - {fileID: 2800000, guid: b2f9adc22d0fa0647880b18b89bf0872, type: 3}
   - {fileID: 2800000, guid: 8583bfb2058e94a48801d7212430d8d1, type: 3}
   - {fileID: 2800000, guid: a734eccac0ad8bc49950dd4fbee58611, type: 3}
-  menuGUIContents: []
+  menuGUIContents:
+  - m_Text: 
+    m_Image: {fileID: 2800000, guid: 34aed1010b525bf4c9cfd7da35361a90, type: 3}
+    m_Tooltip: Scene View Status
+  - m_Text: 
+    m_Image: {fileID: 2800000, guid: 32e963efb91d19147842f8bd95d6ac56, type: 3}
+    m_Tooltip: Add Road Object
+  - m_Text: 
+    m_Image: {fileID: 2800000, guid: ffc15be4bded7b34f9f406cde082a4a2, type: 3}
+    m_Tooltip: Add Connection Object
+  - m_Text: 
+    m_Image: {fileID: 2800000, guid: 881f73f964cf5104abc91a5f657615a8, type: 3}
+    m_Tooltip: Update Terrain
+  - m_Text: 
+    m_Image: {fileID: 2800000, guid: b2f9adc22d0fa0647880b18b89bf0872, type: 3}
+    m_Tooltip: General Settings
+  - m_Text: 
+    m_Image: {fileID: 2800000, guid: 8583bfb2058e94a48801d7212430d8d1, type: 3}
+    m_Tooltip: Side Object Manager
+  - m_Text: 
+    m_Image: {fileID: 2800000, guid: a734eccac0ad8bc49950dd4fbee58611, type: 3}
+    m_Tooltip: Info
   subMenuTexs: []
   cprefab: {fileID: 0}
   nodeHandleTexture: {fileID: 0}
@@ -2137,9 +2158,9 @@ MonoBehaviour:
   roadTypes:
   - roadTypeName: Default Road
     id: 0
-    timestamp: 1450386558.4872544
-    roadWidth: 5
-    faceDistance: 4
+    timestamp: 1493043592.8070207
+    roadWidth: 6
+    faceDistance: 2
     angleTreshold: 45
     uvTiling: 1
     uv4Type: 0
@@ -2173,15 +2194,21 @@ MonoBehaviour:
     minSpeed: 45
     maxSpeed: 55
     speedLimit: 50
-    roadShape: []
+    roadShape:
+    - {x: -3, y: 0}
+    - {x: 3, y: 0}
     roadShapeExt: []
     roadShapeExt2: []
     doConnectionTri: 
     doConnectionTriExt: 
-    roadShapeUVs: []
+    roadShapeUVs:
+    - 0
+    - 1
     roadShapeExtUVs: []
     roadShapeExtUVs2: []
-    roadShapeUVs2: []
+    roadShapeUVs2:
+    - 0
+    - 1
     preserveUVs: 0
     hardEdge: 
     roadShapeVecsString: 
@@ -2198,7 +2225,7 @@ MonoBehaviour:
       type: 2}
     isSideObject: 0
     isCustomRoad: 0
-    subSegments: 0
+    subSegments: 1
     soData: []
     soDataExt: []
     soDataLog: []
@@ -2207,14 +2234,14 @@ MonoBehaviour:
     tag: Untagged
     splatMapActive: 0
     splatIndex: 0
-    expandLevel: 1
-    smoothLevel: 1
-    splatOpacity: 1
+    expandLevel: 0
+    smoothLevel: 0
+    splatOpacity: 0
     followTerrainContours: 0
     terrainContoursOffset: 0
     terrainDeformation: 1
-    defaultIndent: 3
-    defaultSurrounding: 3
+    defaultIndent: 0
+    defaultSurrounding: 0
     castShadow: 0
     randomnessFlag: 0
     randomYPosition: 0
@@ -2446,8 +2473,8 @@ MonoBehaviour:
   terrainDetailSplatX: 6.5104165
   terrainDetailSplatY: 6.5104165
   detailOffsetVec: {x: 6.5104165, y: 0, z: 6.5104165}
-  raise: 0.2
-  baseVector: {x: 0, y: 0.2, z: 0}
+  raise: 0.1
+  baseVector: {x: 0, y: 0.1, z: 0}
   mirrorCrossings: 1
   terrainNames:
   - All Terrains
@@ -2456,9 +2483,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 796017583}
   terrainSplatTextures:
-  - Splat 1 - ground02
-  - Splat 2 - GroundStones01
-  - Splat 3 - ground01
+  - Splat 1 - DirtLayer
+  - Splat 2 - CloseRocksLayer
+  - Splat 3 - GrassLayer
+  - Splat 4 - NewLayer 1
   activeTerrain: {fileID: 0}
   activeTerrainY: -686.97
   selectedTerrain: 0
@@ -2602,8 +2630,8 @@ MonoBehaviour:
   importRoadPresetsAlert: 1
   importCrossingPresetsAlert: 0
   importSidewalkPresetsAlert: 0
-  updateSideObjectsAlert: 0
-  updateRoadPresetsAlert: 0
+  updateSideObjectsAlert: 1
+  updateRoadPresetsAlert: 1
   updateCrossingPresetsAlert: 0
   updateSidewalkPresetsAlert: 0
   waypointDistance: 10
@@ -2756,7 +2784,7 @@ MonoBehaviour:
   startCapColor: {r: 0.35, g: 0.5, b: 0.9, a: 1}
   endCapColor: {r: 0.35, g: 0.5, b: 0.9, a: 1}
   soSectionMaterial: {fileID: 0}
-  v32b4Flag: 0
+  v32b4Flag: 1
   ctrlKey: 0
 --- !u!4 &675682768
 Transform:

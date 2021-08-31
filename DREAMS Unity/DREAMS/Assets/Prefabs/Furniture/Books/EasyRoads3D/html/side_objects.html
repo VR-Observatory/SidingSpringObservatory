@@ -34,9 +34,9 @@
 <ul>
   <li><span class="propertyStyle"><strong>Create New Side Object:</strong></span> Click this button to add a new side object</li>
   <li><strong class="propertyStyle">Add Project Side Objects:</strong> All new side objects in a scene are stored both in the scene as in the assets folder (/Assets/EasyRoads3D/Resources/ERSideObjectsLog). This button will be active when there are side objects available in the assets folder that are not yet added to this  scene. The button will open the side object importer window with a list of all available side objects. This way you can keep the scene specific side objects list clear and concise.</li>
-  <li><span class="propertyStyle">Import Side Objects:</span> Importing side objects from another project is supported. After importing the side object unity package (see below in Export Side Objects), Click this&quot;Import Side Objects&quot; button. The Side Object Import window will open. Drop the prefab with side object presets (see below in Export Side Objects) in the window. All side objects will be listed, you can chose which side objects to import [<a href="http://unityterraintools.com/tutorials/so_import_export.php" class="link"><strong>website tutorial</strong></a>]</li>
+  <li><span class="propertyStyle">Import Side Objects:</span> Importing side objects from another project is supported. After importing the side object unity package (see below in Export Side Objects), Click this&quot;Import Side Objects&quot; button. the Side Object Import window will open. Drop the prefab with side object data (see below in Export Side Objects) on the canvas. All side objects will be listed, you can chose which side objects to import.</li>
   <li><span class="propertyStyle"><strong>Manage Project  Side Objects:</strong></span> Click this button to remove side objects permanantly from the project</li>
-  <li><strong class="propertyStyle">Export Side Objects:</strong> Click this button to export side objects. The  side objects that should be exported can be selected. After clicking the Export button you will be asked to set a location and name for the created prefab. This should be inside the assets folder. This prefab including all the dependencies will be exported to a unity package [<a href="http://unityterraintools.com/tutorials/so_import_export.php" class="link"><strong>website tutorial</strong></a>]<br>
+  <li><strong class="propertyStyle">Export Side Objects:</strong> Click this button to export side objects. You can select which side objects to export. After clicking the Export button you will be asked to set a location and name for the created prefab. This should be inside the assets folder. This prefab including all the dependencies will be exported to a unity package.<br>
     <br>
   </li>
   <li><strong class="propertyStyle">Selected Side Object:</strong> The currently active side object<br>
@@ -148,8 +148,8 @@ Average height: The instance Y position will match the average height<br>
   <li><strong class="propertyStyle">Open Shape Editor Window:</strong> This will open the editor window which you can use to define the shape of the side object. See below or <a href="#shapeditor" class="link">Click here</a> for more info.</li>
   <li><strong class="propertyStyle">Target Object:</strong> Optionally you can drag a prefab to this slot. This prefab will be instantiated and the procedurally created shape will be added to this prefab. This is useful if you want to create a shape with additional scripts attached. You can for example drag one of the Unity water prefabs to this slot and define a simple horizontal shape simulating the water surface. The final object will have all the water scripts and materials automatically attached, the mesh shape will be added procedurally.</li>
   <li><strong class="propertyStyle">Material:</strong> The material that should be used for this side object. This is not required if you assigned a Target Object above with already materials set up.</li>
-  <li><strong class="propertyStyle">Start Connection Object:</strong> This can be used to attach a start game object to the shape. In v3 it is recommended to use the Procedural Mesh Object for side objects also including Start / End objects</li>
-  <li><strong class="propertyStyle">End Connection Object:</strong> This can be used to attach an end game object to the shape. In v3 it is recommended to use the Procedural Mesh Object for side objects also including Start / End objects</li>
+  <li><strong class="propertyStyle">Start Connection Object:</strong> (inactive), this can be used to attach a start game object to the shape. In v3 it is recommended to use the Procedural Mesh Object for side objects also including Start / End objects</li>
+  <li><strong class="propertyStyle">End Connection Object:</strong> (inactive), this can be used to attach an end game object to the shape. In v3 it is recommended to use the Procedural Mesh Object for side objects also including Start / End objects</li>
   <li><strong class="propertyStyle">Controller Type:</strong> (inactive) This controls the geometry structure and positioning, the options are &quot;Clamp Left&quot;, &quot;Clamp Right&quot; and &quot;Spline Controller&quot;. &quot;Clamp Left&quot; and &quot;Clamp Right&quot; will create geometry based on the resolution and vertice positions of the road geometry. &quot;Clamp Left&quot; will create the geometry at the left side of the road,  &quot;Clamp Right&quot; will create the geometry at the right side of the road. When &quot;Spline Controller&quot; is selected the geometry will be created according the spline curve and the Geometery Resolution value below.</li>
   <li><strong class="propertyStyle">Geometry Resolution: </strong>The distance between vertex rows. Use this to control the resolution of the geometry.</li>
   <li><strong class="propertyStyle">X Position:</strong> This will move the object sideways relative to the selected to the selected option from the dropdown. Options are:<br>
@@ -199,8 +199,6 @@ Average height: The instance Y position will match the average height<br>
   <li><strong class="propertyStyle">Y Position: </strong>This will move the object upwards</li>
   <li><strong class="propertyStyle">Default Sideways Position:</strong> (Inactive) This defines the default position to the right or left of the center of the road. <a href="#sideObjectMarker" class="link">This position can be adjusted for each marker</a>, the side object will be build on its own spline curve relative to the main spline shape and is useful to have side objects such as fences move away and towards the roads. To avoid overwriting marker specific values, updating this value here will by default not affect exisiting instances. You can force changes by selecting the appropriate option from the dropdown. <br>
     <br>
-    <span class="style6">Note:</span> Source Prefabs with submeshes using multiple materials is currently not yet supported, this will be available in v3.3. Meanwhile please export the model so it imports with each material group added as a child object. That is supported.<br>
-<br>
     <span class="style6">Note:</span> When using the Sideways Position option the side object will be generated on its own spline shape relative to the road. Do not use this option when you want the side object to follow the road at a fixed distance (such as road guard rails). Instead use the above X Position option for this type of side objects.<br>
     <br>
   </li>
@@ -239,7 +237,7 @@ Average height: The instance Y position will match the average height<br>
   <li><strong class="propertyStyle">Flip Faces:</strong> Click this button if it turns out the normals point in the opposite direction</li>
   <li><strong class="propertyStyle">Apply:</strong> This will save changes and update all exisiting scene instances</li>
 </ul>
-<p class="style1">The stage can be dragged by moving the mouse and pressing the left button. Zoom in and out using the scrollwheel or Shift+click+drag, hold Shift to select and move multiple roads</p>
+<p class="style1">You can drag the stage by moving the mouse and pressing the left button. Zoom in and out using the scrollwheel or Shift+click+drag, hold Shift to select and move multiple roads</p>
 <p class="style1">Shortcuts:</p>
 <p class="style1">R: This will center the stage<br> 
   Z: This will zoom the stage so the the bounding box of the entered points is completely visible
@@ -311,8 +309,8 @@ Average height: The instance Y position will match the average height<br>
   <li><span class="propertyStyle">Rotation Center Position:</span> The origin of the rotation on this marker section.</li>
 </ul>
 <p class="style1">&nbsp;</p>
-<p class="header2">Side object examples and Tutorials</p>
-<p class="style1">A wide range of side object examples are available in the additional <a href="https://assetstore.unity.com/packages/tools/terrain/easyroads3d-demo-project-105045" target="_blank" class="link"><strong>free demo package</strong></a> including <a href="http://unityterraintools.com/tutorials.php" target="_blank" class="link"><strong>tutorials</strong></a> on our <a href="http://unityterraintools.com/" target="_blank" class="link"><strong>website</strong></a></p>
+<p class="style1">&nbsp;</p>
+<p class="style1">[screenshot marker settings]</p>
 <p class="style1">&nbsp;</p>
 <p class="style1">&nbsp;</p>
 <p class="style21">&nbsp;</p>

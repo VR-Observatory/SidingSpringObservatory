@@ -31,7 +31,7 @@
 <p>&nbsp;</p>
 	      <p class="header2">TERRAIN DEFORMATION</p>
 	      <p>To flatten the terrain according the road network shape, activate the terrain tab <img src="../images/terrain_tab.jpg" width="53" height="29" style="vertical-align:middle"> from the main EasyRoads3D Toolbar in the Inspector.</p>
-	      <p><img src="../images/terrain_pre_build_options.jpg" width="431" height="462"></p>
+	      <p><img src="../images/terrain_pre_build_options.jpg" width="437" height="356"></p>
 	      <p>Before flattening the terrain you can choose among a number of options to improve the performance / workflow.</p>
 	      <ul>
 	        <li><span class="propertyStyle">Raise Road Network:</span> This can be used to move the road network higher above the terrain to avoid z-fighting with the terrain</li>
@@ -43,22 +43,20 @@
 	        <li><span class="propertyStyle">Calculate Road Tangents:</span> This will add additional tangent info to the road, crossings and side objects mesh data which is required when you use bumped shaders.</li>
 	        <li><span class="propertyStyle">Calculate Lightmap UVs:</span> This will generate lightmap UVs for  road, crossings and side objects. <span class="style3">Note:</span> Unity will rebuild the mesh resulting in different vertex count. This means all crossings need to be rebuild after switching back to Edit Mode. To save time during development you may want to keep this setting switched off.<strong><a name="lod" id="lod"></a></strong></li>
 	        <li><span class="propertyStyle">Build LOD Groups:</span> (inactive) This will generate LOD groups for each road.</li>
-	        <li><span class="propertyStyle">Build Terrain(s):</span> This starts the buildprocess. You will see a progressbar. This progressbar is not yet fully optimized, it may seem nothing is happening. Especially scenes with many trees and details objects can take some time. </li>
-	        <li><span class="propertyStyle">Finalize Road Network: </span>This will remove all script components from all road network objects. Only use this option when all work on the road network is completed. It is recommended to duplicate the scene first in the project folder and keep this scene as a backup just in case changes to the road network are actually required. This Finalize option is especially intended for when only side objects are involved or when custom road shapes are used that do not require terrain deformation. This Finalize option is also available in Build Mode covered here below.</li>
+	        <li><span class="propertyStyle">Build Terrain:</span> This starts the buildprocess. You will see a progressbar. This progressbar is not yet fully optimized, it may seem nothing is happening. Especially scenes with many trees and details objects can take some time. </li>
+	        <li><span class="propertyStyle">Finalize Road Network: </span>This will remove all script components from all road network objects. Only use this option when you are finished building the road network. It is recommended to duplicate the scene first in the assets folder and keep that as a backup. This option is also available before updating the terrain(s) in the case you only have side objects in the scene or when you are using custom road shapes that do not require terrain deformation.</li>
 	      </ul>
 <p>After the Build Terrain process has finished the Inspector will update:</p>
-	      <p><img src="../images/terrain_build.jpg" width="431" height="549"></p>
+	      <p><img src="../images/terrain_build.jpg" width="435" height="310"></p>
 	      <p>&nbsp;</p>
 	      <ul>
 	        <li><span class="propertyStyle">Raise Road Network:</span> This can be used to move the road network higher above the terrain to avoid z-fighting with the terrain</li>
-	        <li><span class="propertyStyle">Back to Edit Mode:</span> Click this button to switch back to Edit Mode to continue working on the road network.</li>
-	        <li><span class="propertyStyle">Export Road Network Geometry:</span> This will export the full road network to .obj. This is useful in case you want to manually add detail to the road network in a modelling application.</li>
-	        <li><span class="propertyStyle">Store Mesh Assets in Project Folder:</span> Currently the mesh data is stored in the scene file. This button will store the data in the project folder which can be useful in the case you want to for example create prefabs. The mesh assets are currently stored in the project folder as is. When you remove roads, crossings or deactivate side objects afterwards these assets will not be removed. If you want to store mesh assets in the project folder, it is recommended to do this once you are finished creating the road network before finalizing the scene (which is optional).</li>
-	        <li><span class="propertyStyle">Smoothen Indent Area:</span> This will smoothen the surrounding area just outside the indent area. In order for this to work the surrounding area must cover multiple terrain points.</li>
-	        <li><span class="propertyStyle">Smoothen Surrounding Area:</span> This will smoothen   the area at the end of the surrounding area one the edge with the original terrain height.</li>
+	        <li><span class="propertyStyle">Restore Terrain:</span> Click this button to switch back to Edit Mode.</li>
 	        <li><span class="propertyStyle">Reapply Critical Road Heights:</span> This button can be used after manual height alterations near roads. It will reapply the correct height to those terrain points that should exactly match the road shape. </li>
 	        <li><span class="propertyStyle">Preserve Terrain Contours: </span> This slider can be used to preserve the natural shape of the terrain. A value of 0 means that the terrain will exactly match the shape of the white surfaces surrounding the roads. A setting of 1 will rebuild the full terrain shape in this area but gradually move the heights towards the critical terrain heights that should always match the road shape.</li>
-	        <li><span class="propertyStyle">Finalize Road Network: </span><span class="propertyStyle"> </span>This will remove all script components from all road network objects. Only use this option when all work on the road network is completed. It is recommended to duplicate the scene first in the project folder and keep this scene as a backup just in case changes to the road network are actually required. </li>
+	        <li><span class="propertyStyle">Export Road Network:</span> This will export the full road network to .obj. This is useful in case you want to manually add detail to the road network in a modelling application.</li>
+	        <li><span class="propertyStyle">Store Mesh Assets in Project Folder:</span> Currently the mesh data is stored in the scene file. This button will store the data in the project folder which can be useful in the case you want to for example create prefabs. The mesh assets are currently stored in the project folder as is. When you remove roads, crossings or deactivate side objects afterwards these assets will not be removed. If you want to store mesh assets in the project folder, it is recommended to do this once you are finished creating the road network before finalizing the scene (which is optional).</li>
+	        <li><span class="propertyStyle">Finalize Road Network: </span>This will remove all script components from all road network objects. Only use this option when you are finished building the road network. It is recommended to duplicate the scene first in the assets folder and keep that as a backup.</li>
 	      </ul>
 <p>&nbsp;</p>
 <p>&nbsp;</p></td>
