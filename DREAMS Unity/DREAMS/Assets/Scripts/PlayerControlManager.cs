@@ -38,9 +38,9 @@ public class PlayerControlManager : MonoBehaviour
                 ActivateControlAndroidMobile();
                 break;
             default:
-                if (OVRManager.isHmdPresent)
-                    ActivateControlOVR();
-                else if (Application.platform == RuntimePlatform.Android)
+                // if (OVRManager.isHmdPresent)
+                //    ActivateControlOVR();
+                if (Application.platform == RuntimePlatform.Android)
                     ActivateControlAndroidMobile();
                 else
                     ActivateControlPC();
