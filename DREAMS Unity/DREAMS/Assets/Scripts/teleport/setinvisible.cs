@@ -11,6 +11,10 @@ public class setinvisible : MonoBehaviour
     void Start()
     {
         currentlight.GetComponent<Renderer>().enabled = false;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+           transform.GetChild(i).gameObject.GetComponent<Renderer>().enabled = false;
+        }
 
     }
 

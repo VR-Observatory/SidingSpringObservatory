@@ -40,11 +40,20 @@ public class click_teleport : MonoBehaviour
         {
             if (obj)
             {
+                for (int i = 0; i < obj.transform.childCount; i++)
+                {
+                    obj.transform.GetChild(i).gameObject.GetComponent<Renderer>().enabled = false;
+                }
                 obj.GetComponent<Renderer>().enabled = false;
+
             }
         }
-        CurrentLight.GetComponent<Renderer>().enabled = true;
 
+        CurrentLight.GetComponent<Renderer>().enabled = true;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.GetComponent<Renderer>().enabled = true;
+        }
 
     }
 }

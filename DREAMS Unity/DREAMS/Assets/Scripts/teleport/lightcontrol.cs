@@ -28,6 +28,14 @@ public class lightcontrol : MonoBehaviour
             if (obj)
             {
                 obj.GetComponent<Renderer>().enabled = true;
+                for (int i = 0; i < obj.transform.childCount; i++)
+                {
+                    obj.transform.GetChild(i).gameObject.GetComponent<Renderer>().enabled = true;
+                }
+                Vector3 tar = transform.position;
+                tar.y = obj.transform.position.y;
+                obj.transform.LookAt(tar);
+                obj.transform.Rotate(0, 180, 0);
             }
         }
     }
@@ -39,6 +47,10 @@ public class lightcontrol : MonoBehaviour
         {
             if (obj)
             {
+                for (int i = 0; i < obj.transform.childCount; i++)
+                {
+                    obj.transform.GetChild(i).gameObject.GetComponent<Renderer>().enabled = false;
+                }
                 obj.GetComponent<Renderer>().enabled = false;
             }
         }
