@@ -15,8 +15,8 @@
 </table>
 <table width="93%" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>
-	    <td><a href="general_settings.html"><img src="../images/previousTop.jpg" width="97" height="20" border="0"></a></td>
-	    <td align="right"><a href="intersections.html"><img src="../images/nextTop.jpg" width="73" height="20" border="0"></a></td>
+	    <td><a href="toolbar.html"><img src="../images/previousTop.jpg" width="97" height="20" border="0"></a></td>
+	    <td align="right"><a href="general_settings.html"><img src="../images/nextTop.jpg" width="73" height="20" border="0"></a></td>
       </tr>
 	  <tr>
 	    <td height="35" valign="bottom"><a href="../manualv3.html"><img src="../images/home.jpg" width="130" height="20" border="0"></a></td>
@@ -47,22 +47,22 @@
     <span class="propertyStyle">Bumpiness Y Offset:</span> The smoothness level of the road controllable through Min Max values<br>
     <span class="propertyStyle">Bumpiness Distance:</span> The distance controlable through Min Max values<br>
     <span class="propertyStyle">Random Tilting Angles:</span> Adds additional tilting to the road controllable through Min Max values<br>
-    <span class="propertyStyle">Tilting Distance:</span> The distance over which the tilting takes place</li>
+    <span class="propertyStyle">Tilting Distance:</span> The distance over which the tilting takes place. </li>
   <li><span class="propertyStyle">Follow terrain Contours <strong class="propertyStyle">[Pro]</strong>:</span> The road will auto adjust to the terrain shape, this will greatly speed up the workflow as less markers will be required</li>
-  <li><span class="propertyStyle">Contour Treshold <strong class="propertyStyle">[Pro]</strong>:</span>The lower values the more the road will match the terrain shape, use higher values for roads like motorways. This is a DelayedFloatField, hit enter to update the road after changing the value</li>
-  <li><span class="propertyStyle">Road Material:</span> the material assigned to this road. The dropdown lists all materials in /EasyRoads3D/Resources/Materials/Roads and can be used to quickly assign another material. It is recommend though to work with road types and apply the material changes to the road type</li>
-  <li><span class="propertyStyle">UV Tiling:</span> This controls the tile size of the used road texture</li>
-  <li><span class="propertyStyle">Additional UV data: </span>Additionally uv data matching the terrain boundingbox or uv data tiled on a specified distance can be generated in UV channel 4</li>
-  <li><span class="propertyStyle">Flip Road Texture / UVs: </span>This will swap the uv coordinates of the road. By default texturing of opposite roads on a connection will match regardless how they are connected to the crossing. If you do not want that for specific roads, you can change that by flipping the road texture of a road. This option can also be useful for roads connected to custom connectors when the UVs look wrong or flipped</li>
-  <li><span class="propertyStyle">Flip Normals:</span> This can be useful for tracks generated through the custom prefab system. Soemtimes you want thw normals to point to the other direction like for tunnel / cave type of shapes</li>
+  <li><span class="propertyStyle">Contour Treshold <strong class="propertyStyle">[Pro]</strong>:</span> The accuracy. Use lower values to exactly match the terrain shape, use higher values for roads like motorways.</li>
+  <li><span class="propertyStyle">Road Material:</span> the material assigned to this road. The dropdown lists all materials in /EasyRoads3D/Resources/Materials/Roads and can be used to quickly assign another material. It is recommend though to work with road types and apply the material changes to the road type.</li>
+  <li><span class="propertyStyle">UV Tiling:</span> This controls the tile size of the used road texture.</li>
+  <li><span class="propertyStyle">Additional UV data: </span>Additionally uv data matching the terrain boundingbox or uv data tiled on a specified distance can be generated in UV channel 4.</li>
+  <li><span class="propertyStyle">Flip Road Texture / UVs: </span>This will swap the uv coordinates of the road. By default texturing of opposite roads on a connection will match regardless how they are connected to the crossing. If you do not want that for specific roads, you can change that by flipping the road texture of a road. This option can also be useful for roads connected to custom connectors when the UVs look wrong or flipped.</li>
+  <li><span class="propertyStyle">Flip Normals:</span> This can be useful for tracks generated through the custom prefab system. Soemtimes you want thw normals to point to the other direction like for tunnel / cave type of shapes.</li>
   <li><span class="propertyStyle"><a name="startEndDecals"></a>Start Decal: </span>The currently selected Decal at the start, this can be updated manually by selecting another deval from the dropdown. Decals can be used as a transition between road types at crossings or to add variation, cracks, road fixes. Decal prefabs can be added per road type in <a href="general_settings.html#startEndDecals" class="link">General Settings &gt; Road Types</a>.</li>
   <li><span class="propertyStyle">End Decal:</span> The currently selected Decal at the start, this can be updated manually by selecting another deval from the dropdown. Decals can be used as a transition between road types at crossings or to add variation, cracks, road fixes. Decal prefabs can be added per road type in <a href="general_settings.html#startEndDecals" class="link">General Settings &gt; Road Types</a>.</li>
   <li><span class="propertyStyle">Closed Track:</span> This will loop the road, ideal for generating race tracks</li>
-  <li><span class="propertyStyle">Terrain Deformation: </span>This can be used to turn off terrain deformation for this particular road, for instance roads used as bridge segments</li>
-  <li><span class="propertyStyle">Cast Shadows</span>: Toggle this on when the object should cast shadows</li>
+  <li><span class="propertyStyle">Terrain Deformation: </span>This can be used to turn off terrain deformation for this particular road, for instance roads used as bridge segments.</li>
+  <li><span class="propertyStyle">Cast Shadows</span>: Toggle this on when the object should cast shadows.</li>
   <li><span class="propertyStyle">Delete Object:</span> this will remove the object</li>
   <li><span class="propertyStyle">Select Object in Hierarchy:</span> This will select the actual road object. It doesn't really serve a purpose other then providing a quick way to actually select that road in the hierachy</li>
-  <li><span class="propertyStyle">Duplicate Object:</span> This will copy the object which is useful if you need a range of similarly shaped objects</li>
+  <li><span class="propertyStyle">Duplicate Object:</span> This will copy the object which is useful if you need a range of similarly shaped objects.</li>
 <!--  <li><span class="propertyStyle">Waypoint Distance:</span> The distance between waypoints generated through the below button</li>
   <li><span class="propertyStyle"><strong>Generate Waypoints:</strong></span> This will generate empty game objects on the marker positions as a child of the road object itself (easy accessible through the above button <strong>Select Road in Hierarchy</strong>). The generated waypoints can fore example be used for AI purposes. </li>-->
   <li><span class="propertyStyle">Export Object:</span> This will export the selected road to .obj</li>
@@ -72,9 +72,7 @@
 <p class="style1"><strong>Side Objects Status</strong><span class="header2"><a name="sideObjects" id="addmarkers12"></a></span></p>
 <p class="style1">This will list all available side objects in the scene. You can select which side objects to activate for this road object.</p>
 <p class="style1">The foldout will show additional controls to adjust the <a href="side_objects.html#">default settings</a> of this particular instance of the side object. </p>
-<p class="style1">The X Position relative to the default position with options for randomness. The same for the Y position and random rotation angles.
-</p>
-<p class="style1">&nbsp;<br>
+<p class="style1">The X Position relative to the default position with options for randomness. The same for the Y position and random rotation angles.<br>
 </p>
 <p class="style1"><strong>Marker Properties</strong><span class="header2"><a name="markerProperties" id="addmarkers6"></a></span></p>
 <ul>
@@ -141,8 +139,8 @@
 </ul>
 <p class="style21">&nbsp;</p>
 <p class="header2">ATTACH CROSSING <span class="style21">[Pro]</span><a name="attachCrossing" id="addmarkers3"></a></p>
-<p class="style1">Crossings can be attached directly to a road by selecting the first or last marker of that road. In the Crossing / Connection Tab <img src="../images/prefabs_tab.jpg" width="53" height="29" style="vertical-align:middle"> (third from the left int the Inspector) all available crossing / connection objects will be displayed. Click the object you want to attach to the selected marker.</p>
-<p class="style1">Alternatively  crossing objects can be instantiated directly to the scene, especially roundabout objects, through this same tab. When no road is selected, all crossing and connection prefabs will be visible.  Select the object you want to instantiate in the scene, hold the SHIFT key and click in the scene where you want to position the object. You can repeat SHIFT + click if you want to instantiate the same object multiple times.</p>
+<p class="style1">Crossings can be attached directly to a road by selecting the first or last marker of that road. In the Inspector you will see all available crossing / connection objects. Click the object you want to attach to the selected marker.</p>
+<p class="style1">Alternatively you can add crossing objects directly to the scene, especially roundabout objects, by clicking the connection prefab tab <img src="../images/prefabs_tab.jpg" width="53" height="29" style="vertical-align:middle">. You will see the same list of available crossing / connection prefabs. Select the object you want to instantiate in the scene, hold the SHIFT key and click in the scene where you want to position the object. You can repeat SHIFT + click if you want to instantiate the same object multiple times.</p>
 <p class="style1">&nbsp;</p>
 <p class="style21"><span class="header2">CONNECTION CONTROLS [Pro]<a name="connectionProperties" id="addmarkers4"></a></span></p>
 <p class="style21"><img src="../images/connectionproperties.jpg" width="449" height="358"></p>
@@ -191,8 +189,8 @@
 <p>&nbsp;</p></td>
 </tr>
 	  <tr>
-	    <td><a href="general_settings.html"><img src="../images/previousBtm.jpg" width="89" height="20" border="0"></a></td>
-	    <td align="right"><a href="intersections.html"><img src="../images/nextBtm.jpg" width="70" height="20" border="0"></a></td>
+	    <td><a href="toolbar.html"><img src="../images/previousBtm.jpg" width="89" height="20" border="0"></a></td>
+	    <td align="right"><a href="general_settings.html"><img src="../images/nextBtm.jpg" width="70" height="20" border="0"></a></td>
       </tr>
     </table>
 	<p>&nbsp;</p>

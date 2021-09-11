@@ -24,12 +24,12 @@
 	  <tr>
 	    <td colspan="2" class="style1"><p class="style1">&nbsp;</p>
 	      <p class="header1" style="color:#000">Release Notes 
-	      v3.1.9f4<hr>
+	      v3.1.6<hr>
 	      <p class="style21">&nbsp;</p>
 	      <p class="header2">Important</p>
 	      <p class="style21">&nbsp;</p>
 	      <p class="style21">Importing package updates</p>
-          <p class="style1">Please do NOT remove the EasyRoads3D folder before importing a package update. Apart from newly created dynamic and custom connection prefabs, the EasyRoads3D folder also includes assets with project info such as road types, side objects. When you remove the EasyRoads3D folder  these assets will be lost. Also make sure to close the Custom Prefab Editor window if currently open before importing a package update.</p>
+          <p class="style1">Do NOT remove the EasyRoads3D folder before importing a package update. Apart from newly created dynamic and custom connection prefabs, the EasyRoads3D folder also includes assets with project info such as road types, side objects. When you remove the EasyRoads3D folder  these assets will be lost. Also make sure to close the Custom Prefab Editor window if currently open before importing a package update.</p>
           <p class="style1">Additionally, it is also recommended to switch road networks back to Edit Mode or better open an empty scene before importing a package update .</p>
           <p class="style1">And please always backup your project first. It is recommended to regularly backup your project anyway.</p>
           <p class="style21">&nbsp;</p>
@@ -50,23 +50,26 @@
           <p>&nbsp;</p>
           <p class="header1"><strong>Release Notes:</strong> </p>
           <p class="style1">Please visit our <a href="http://unityterraintools.com/v3beta.php" class="link">website</a> for beta release notes </p>
-
+<!--          <p class="style1"><strong>New:</strong></p>
+          <p class="style1">- Insert Connection: Matching connection prefabs based on road types can now be inserted at any marker position</p>
+          <p class="style1">&nbsp;</p>-->
 <p class="style1">&nbsp;</p>
 <p class="style1"><strong>New:</strong></p>
-<p class="style1">- Marker Road shape control through the scripting API: ERRoad.GetRoadShapeNodes(int markerIndex), ERRoad.SetRoadShapeNodes(int markerIndex, Vector2[] nodes) , ERRoad.SetRoadShapeNodes(int[] markerIndexes, Vector2[] nodes)</p>
+<p class="style1">- OSM road data: textfield for an additional manual osm road type input</p>
 <p class="style1">&nbsp;</p>
-
+<!--
 <p class="style1"><strong>Changed:</strong></p>
-<p>- Scripting API: Obsolete ERRoadNetwork.GetSourceConnectionByName(string name). This is replaced by ERRoadNetwork.GetConnectionPrefabByName(string name)</p>
-<p>&nbsp;</p>
-<p class="style1"><strong>Improved:</strong></p>
-<p class="style1">- The marker alignment options when 2 markers are selected can now also be used for two road object sections connected with an I Connector</p>
-<p class="style1">- Unity 2019.3, Inspector foldouts can now also be opened by clicking on the arrow just like in previous Unity versions</p>
+<p class="style1">- </p>
 <p class="style1">&nbsp;</p>
+<p class="style1"><strong>Improved:</strong></p>
+<p class="style1">- </p>
+<p class="style1">&nbsp; </p>
+-->
 <p class="style1"><strong>Fixed:</strong></p>
-<p class="style1">- Scripting API: ERRoad.SplitRoad(int markerIndex)<br>
-  - Missing Category selection option for side objects in the Side Object Manager<br>
-  - Miscellaneous other small bugs and improvements</p>
+<p class="style1">- Unity reimporting assets when saving the scene (Unity 2018.3)</p>
+<p class="style1">- Side object active state changes for road types not updating already exisiting scene instances of that road type</p>
+<p class="style1">- Road shape baking in terrain splatmap  issues near crossings at low terrain heights</p>
+<p class="style1">- Miscellaneous other small bugs and improvements</p>
 <p class="style1">&nbsp;</p>
           <p class="header2">To Do / Current limitations:          </p>
           <p class="style1">&nbsp;</p>
