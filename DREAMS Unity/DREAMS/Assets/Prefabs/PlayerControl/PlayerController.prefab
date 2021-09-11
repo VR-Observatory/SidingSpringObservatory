@@ -84,6 +84,7 @@ MonoBehaviour:
   androidMobilePlayerController: {fileID: 9157271063771470796}
   pcPerformanceStats: {fileID: 8252790303379679596}
   ovrPerformanceStats: {fileID: 3705998506529288392}
+  androidPerformanceStats: {fileID: 196274165087234828}
 --- !u!1 &3705998506529288392
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +184,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 157914486699147564}
     m_Modifications:
+    - target: {fileID: 1789518694636012097, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789518694656205427, guid: 64795af3c551fe9458f58e98e2090a60,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
         type: 3}
       propertyPath: m_RootOrder
@@ -253,6 +264,12 @@ PrefabInstance:
 --- !u!4 &7842973166836075852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8555499121144783873, guid: 64795af3c551fe9458f58e98e2090a60,
+    type: 3}
+  m_PrefabInstance: {fileID: 1904155770609412429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &196274165087234828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1789518694636012097, guid: 64795af3c551fe9458f58e98e2090a60,
     type: 3}
   m_PrefabInstance: {fileID: 1904155770609412429}
   m_PrefabAsset: {fileID: 0}

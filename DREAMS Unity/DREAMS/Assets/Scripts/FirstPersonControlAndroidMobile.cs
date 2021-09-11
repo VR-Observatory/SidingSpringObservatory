@@ -28,8 +28,6 @@ public class FirstPersonControlAndroidMobile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
         mobileInfo.SetActive(true);
     }
 

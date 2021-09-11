@@ -21,6 +21,7 @@ public class PlayerControlManager : MonoBehaviour
 
     public GameObject pcPerformanceStats;
     public GameObject ovrPerformanceStats;
+    public GameObject androidPerformanceStats;
     // public GameObject androidMobilePerformanceStats;
 
     // Start is called before the first frame update
@@ -69,6 +70,8 @@ public class PlayerControlManager : MonoBehaviour
         pcPlayerController.SetActive(false);
         ovrPlayerController.SetActive(false);
         androidMobilePlayerController.SetActive(true);
+
+        androidPerformanceStats.SetActive(isDisplayPerformanceStats);
 
         // androidMobilePerformanceStats.SetActive(isDisplayPerformanceStats);
     }
