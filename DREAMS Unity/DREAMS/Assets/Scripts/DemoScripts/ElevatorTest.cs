@@ -7,9 +7,9 @@ public class ElevatorTest : MonoBehaviour
 
     public Animator animator;
     public int floorNum = 2;
-    public GameObject position1;
-    public GameObject position2;
-    public GameObject player;
+    //public GameObject position1;
+    //public GameObject position2;
+    //public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +37,12 @@ public class ElevatorTest : MonoBehaviour
     }
 
     public void LiftTo1() {
-        player.transform.position = position1.transform.position;
+        //player.transform.position = position1.transform.position;
     }
 
     //plan 2 teleport to different elevator
     public void LiftTo2()
     {
-        player.transform.position = position2.transform.position;
+        //player.transform.position = position2.transform.position;
     }
 }
