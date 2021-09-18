@@ -54,7 +54,7 @@ public class TelescopeController : MonoBehaviour
     void Update()
     {
         Move();
-        print(midpartConnection.transform.localEulerAngles);
+        //print(midpartConnection.transform.localEulerAngles);
     }
 
     private void Move() {

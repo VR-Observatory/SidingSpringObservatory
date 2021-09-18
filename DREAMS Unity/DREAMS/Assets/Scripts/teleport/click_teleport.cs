@@ -15,8 +15,8 @@ public class click_teleport : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("start:" + user.transform.position);
-        Debug.Log("end:" + target.transform.position);
+        //Debug.Log("start:" + user.transform.position);
+        //Debug.Log("end:" + target.transform.position);
     }
 
     // Update is called once per frame
@@ -24,9 +24,9 @@ public class click_teleport : MonoBehaviour
     {
     }
 
-    private void OnMouseUpAsButton()
+    public void OnMouseUpAsButton()
     {
-        Debug.Log("click!!!!!!");
+        //Debug.Log("click!!!!!!");
         transition.SetTrigger("screen_end");
         transition.SetTrigger("screen_continue");
 
@@ -40,20 +40,14 @@ public class click_teleport : MonoBehaviour
         {
             if (obj)
             {
-                for (int i = 0; i < obj.transform.childCount; i++)
-                {
-                    obj.transform.GetChild(i).gameObject.GetComponent<Renderer>().enabled = false;
-                }
-                obj.GetComponent<Renderer>().enabled = false;
+
+                obj.SetActive(false);
 
             }
         }
 
-        CurrentLight.GetComponent<Renderer>().enabled = true;
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).gameObject.GetComponent<Renderer>().enabled = true;
-        }
+        CurrentLight.SetActive(true);
+
 
     }
 }

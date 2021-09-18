@@ -169,6 +169,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.ANU.DREAMS
+    Standalone: com.ANU.DREAMS
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 23
