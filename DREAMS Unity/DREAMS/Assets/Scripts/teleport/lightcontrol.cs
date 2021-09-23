@@ -23,11 +23,11 @@ public class lightcontrol : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (Crosshairs.GetComponent<DrawStar>().whether_first == false)
-        {
-            teleport_notice.SetActive(true);
-            Crosshairs.GetComponent<DrawStar>().whether_first = true;
-        }
+        teleport_notice.SetActive(true);
+        //if (Crosshairs.GetComponent<DrawStar>().whether_first == false)
+        //{
+        //    Crosshairs.GetComponent<DrawStar>().whether_first = true;
+        //}
         Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = true;
         //Debug.Log("enter active");
         foreach (GameObject obj in teleportlights)
@@ -45,7 +45,7 @@ public class lightcontrol : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = false;
+        //Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = false;
         teleport_notice.SetActive(false);
 
         foreach (GameObject obj in teleportlights)
