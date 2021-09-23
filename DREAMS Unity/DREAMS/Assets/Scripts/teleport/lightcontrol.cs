@@ -6,7 +6,8 @@ public class lightcontrol : MonoBehaviour
 {
     public GameObject currentLight;
     public GameObject[] teleportlights = new GameObject[3];
-
+    public GameObject Crosshairs;
+    public GameObject teleport_notice;
 
 
     // Start is called before the first frame update
@@ -22,16 +23,19 @@ public class lightcontrol : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Cursor.visible = true;
+        if (Crosshairs.GetComponent<DrawStar>().whether_first == false)
+        {
+            teleport_notice.SetActive(true);
+            Crosshairs.GetComponent<DrawStar>().whether_first = true;
+        }
+        Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = true;
+        //Debug.Log("enter active");
         foreach (GameObject obj in teleportlights)
         {
             if (obj)
             {
-                obj.GetComponent<Renderer>().enabled = true;
-                for (int i = 0; i < obj.transform.childCount; i++)
-                {
-                    obj.transform.GetChild(i).gameObject.GetComponent<Renderer>().enabled = true;
-                }
+                obj.SetActive(true);
+
                 Vector3 tar = transform.position;
                 tar.y = obj.transform.position.y;
                 obj.transform.LookAt(tar);
@@ -41,17 +45,15 @@ public class lightcontrol : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        Cursor.visible = false;
+        Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = false;
+        teleport_notice.SetActive(false);
 
         foreach (GameObject obj in teleportlights)
         {
             if (obj)
             {
-                for (int i = 0; i < obj.transform.childCount; i++)
-                {
-                    obj.transform.GetChild(i).gameObject.GetComponent<Renderer>().enabled = false;
-                }
-                obj.GetComponent<Renderer>().enabled = false;
+
+                obj.SetActive(false);
             }
         }
     }
