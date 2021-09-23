@@ -558,6 +558,8 @@ MonoBehaviour:
   midpartMaximumAngle: 270
   toppartMinimumAngle: 0
   toppartMaximumAngle: 180
+  sliderValue: 0
+  slider: {fileID: 0}
 --- !u!1 &8898455238075106893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1004,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: seperate-1-simplified v8
       objectReference: {fileID: 0}
+    - target: {fileID: 2320460329571804554, guid: 1d9676bb14e4733438273055068663f4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b1f1b8f117ee804e8d5eb1470800e45, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d9676bb14e4733438273055068663f4, type: 3}
 --- !u!4 &4175757926873091289 stripped
