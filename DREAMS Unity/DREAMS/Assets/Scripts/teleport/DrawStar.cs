@@ -16,7 +16,7 @@ public class DrawStar : MonoBehaviour
     void OnGUI()
     {
 
-        if (Crosshairs_visible == true)
+        if (Crosshairs_visible == true && !OVRManager.isHmdPresent)
         {
             if (Input.GetMouseButtonUp(0))
             {
