@@ -11,10 +11,16 @@ public class click_teleport : MonoBehaviour
     public GameObject start;
     public Animator transition;
     public GameObject CurrentLight;
+    private bool whether_VR = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        if (OVRManager.isHmdPresent)
+        {
+            whether_VR = true;
+        }
         //Debug.Log("start:" + user.transform.position);
         //Debug.Log("end:" + target.transform.position);
     }
@@ -24,8 +30,8 @@ public class click_teleport : MonoBehaviour
     {
     }
 
-    public void OnMouseUpAsButton()
-    {
+    public void OnClick()
+    {       
         //Debug.Log("click!!!!!!");
         transition.SetTrigger("screen_end");
         transition.SetTrigger("screen_continue");

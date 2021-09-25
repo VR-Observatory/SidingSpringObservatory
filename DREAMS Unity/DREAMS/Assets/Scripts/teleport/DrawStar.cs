@@ -45,7 +45,7 @@ public class DrawStar : MonoBehaviour
                 if (Input.GetMouseButtonUp(0))
                 {
                     //cvs2.GetComponent<button_delete>().debugClick();
-                    hit.collider.gameObject.GetComponent<click_teleport>().OnMouseUpAsButton();
+                    hit.collider.gameObject.GetComponent<click_teleport>().OnClick();
                 }
             }
             else

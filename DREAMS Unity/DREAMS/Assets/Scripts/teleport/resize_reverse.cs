@@ -28,7 +28,7 @@ public class resize_reverse : MonoBehaviour
     {
         GameObject Father = transform.parent.gameObject;
         Debug.Log(Father.name);
-        Father.GetComponent<click_teleport>().OnMouseUpAsButton();
+        Father.GetComponent<click_teleport>().OnClick();
 
     }
 }
