@@ -11,12 +11,20 @@ public class DrawStar : MonoBehaviour
     public Camera main_camera;
     public GameObject teleport_notice;
     public bool whether_first = false;
+    private bool whether_VR = false;
+    void Start()
+    {
+        if (OVRManager.isHmdPresent)
+        {
+            whether_VR = true;
+        }
+    }
 
     // Use this for initialization
     void OnGUI()
     {
 
-        if (Crosshairs_visible == true && !OVRManager.isHmdPresent)
+        if (Crosshairs_visible == true && !whether_VR)
         {
             if (Input.GetMouseButtonUp(0))
             {

@@ -15,6 +15,7 @@ public class resize_reverse : MonoBehaviour
         transform.localPosition = new Vector3((float)-0.51, 0, 0);
         transform.localScale = new Vector3(1, 1, 1);
         transform.localEulerAngles = new Vector3(0, 180, 0);
+        GetComponent<button_control>().disableButton();
     }
 
     // Update is called once per frame

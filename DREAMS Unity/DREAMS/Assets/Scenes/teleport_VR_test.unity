@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 8230481}
   - component: {fileID: 8230480}
   - component: {fileID: 8230479}
+  - component: {fileID: 8230483}
   m_Layer: 18
   m_Name: Canvas (6)
   m_TagString: Untagged
@@ -236,6 +237,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &8230483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8230477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9575000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2343733048058456860, guid: 29c7c6777d353524789d1bbecc7c353b,
@@ -1461,6 +1474,7 @@ GameObject:
   - component: {fileID: 190508630}
   - component: {fileID: 190508629}
   - component: {fileID: 190508628}
+  - component: {fileID: 190508632}
   m_Layer: 18
   m_Name: Canvas (6)
   m_TagString: Untagged
@@ -1560,6 +1574,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &190508632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190508626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &190624852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1730,6 +1756,7 @@ GameObject:
   - component: {fileID: 194244587}
   - component: {fileID: 194244586}
   - component: {fileID: 194244585}
+  - component: {fileID: 194244588}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1785,6 +1812,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &194244588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194244584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e65894eabefb13468be02a4a6458a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas_list:
+  - {fileID: 1182563001}
+  - {fileID: 1586601275}
+  - {fileID: 1363136069}
+  - {fileID: 868617058}
+  - {fileID: 1934958771}
+  - {fileID: 1321417779}
+  - {fileID: 421773825}
+  - {fileID: 190508626}
+  - {fileID: 1708287707}
+  - {fileID: 1205095612}
+  - {fileID: 1157421370}
+  - {fileID: 8230477}
 --- !u!114 &203395080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3029,6 +3081,7 @@ GameObject:
   - component: {fileID: 421773829}
   - component: {fileID: 421773828}
   - component: {fileID: 421773827}
+  - component: {fileID: 421773831}
   m_Layer: 18
   m_Name: Canvas (4)
   m_TagString: Untagged
@@ -3128,6 +3181,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &421773831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421773825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &425542785 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5879315926868630141, guid: 4885a694607b4442388b6623f524cd37,
@@ -23351,6 +23416,7 @@ GameObject:
   - component: {fileID: 868617062}
   - component: {fileID: 868617061}
   - component: {fileID: 868617060}
+  - component: {fileID: 868617064}
   m_Layer: 18
   m_Name: Canvas (6)
   m_TagString: Untagged
@@ -23450,6 +23516,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &868617064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868617058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &875851189
 GameObject:
   m_ObjectHideFlags: 0
@@ -24762,6 +24840,7 @@ GameObject:
   - component: {fileID: 1157421374}
   - component: {fileID: 1157421373}
   - component: {fileID: 1157421372}
+  - component: {fileID: 1157421376}
   m_Layer: 18
   m_Name: Canvas (5)
   m_TagString: Untagged
@@ -24861,6 +24940,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1157421376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157421370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1162381979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3370112720003208814, guid: 4885a694607b4442388b6623f524cd37,
@@ -24999,6 +25090,7 @@ GameObject:
   - component: {fileID: 1182563005}
   - component: {fileID: 1182563004}
   - component: {fileID: 1182563003}
+  - component: {fileID: 1182563007}
   m_Layer: 18
   m_Name: Canvas (4)
   m_TagString: Untagged
@@ -25098,6 +25190,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1182563007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182563001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1183839278
 GameObject:
   m_ObjectHideFlags: 0
@@ -25322,6 +25426,7 @@ GameObject:
   - component: {fileID: 1205095616}
   - component: {fileID: 1205095615}
   - component: {fileID: 1205095614}
+  - component: {fileID: 1205095618}
   m_Layer: 18
   m_Name: Canvas (5)
   m_TagString: Untagged
@@ -25421,6 +25526,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1205095618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205095612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1230378521
 GameObject:
   m_ObjectHideFlags: 0
@@ -25997,6 +26114,7 @@ GameObject:
   - component: {fileID: 1321417783}
   - component: {fileID: 1321417782}
   - component: {fileID: 1321417781}
+  - component: {fileID: 1321417785}
   m_Layer: 18
   m_Name: Canvas (7)
   m_TagString: Untagged
@@ -26096,6 +26214,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1321417785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321417779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1332382275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7034331081827933478, guid: d9d928accc6bc8342aa9ddeab28f045d,
@@ -26115,6 +26245,7 @@ GameObject:
   - component: {fileID: 1363136073}
   - component: {fileID: 1363136072}
   - component: {fileID: 1363136071}
+  - component: {fileID: 1363136075}
   m_Layer: 18
   m_Name: Canvas (5)
   m_TagString: Untagged
@@ -26214,6 +26345,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1363136075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363136069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1370310509
 GameObject:
   m_ObjectHideFlags: 0
@@ -27058,6 +27201,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 390049542236706429, guid: a42aa879fef41e441b808771d9629d5f,
         type: 3}
+      propertyPath: eventsys
+      value: 
+      objectReference: {fileID: 194244584}
+    - target: {fileID: 390049542236706429, guid: a42aa879fef41e441b808771d9629d5f,
+        type: 3}
       propertyPath: Crosshairs
       value: 
       objectReference: {fileID: 1301103591}
@@ -27212,6 +27360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519382349424952404, guid: 3b0389450f7cd134eb312932de0c441b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5118670492969863946, guid: 3b0389450f7cd134eb312932de0c441b,
         type: 3}
@@ -27390,6 +27543,11 @@ PrefabInstance:
       objectReference: {fileID: 624957049}
     - target: {fileID: 7772591371500275092, guid: 3b0389450f7cd134eb312932de0c441b,
         type: 3}
+      propertyPath: eventsys
+      value: 
+      objectReference: {fileID: 194244584}
+    - target: {fileID: 7772591371500275092, guid: 3b0389450f7cd134eb312932de0c441b,
+        type: 3}
       propertyPath: Crosshairs
       value: 
       objectReference: {fileID: 1301103591}
@@ -27561,6 +27719,7 @@ GameObject:
   - component: {fileID: 1586601279}
   - component: {fileID: 1586601278}
   - component: {fileID: 1586601277}
+  - component: {fileID: 1586601281}
   m_Layer: 18
   m_Name: Canvas (5)
   m_TagString: Untagged
@@ -27660,6 +27819,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1586601281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586601275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1673317236 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 573621316155370121, guid: 4885a694607b4442388b6623f524cd37,
@@ -28101,6 +28272,7 @@ GameObject:
   - component: {fileID: 1708287711}
   - component: {fileID: 1708287710}
   - component: {fileID: 1708287709}
+  - component: {fileID: 1708287713}
   m_Layer: 18
   m_Name: Canvas (4)
   m_TagString: Untagged
@@ -28200,6 +28372,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1708287713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708287707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1724354745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29589,6 +29773,7 @@ GameObject:
   - component: {fileID: 1934958775}
   - component: {fileID: 1934958774}
   - component: {fileID: 1934958773}
+  - component: {fileID: 1934958777}
   m_Layer: 18
   m_Name: Canvas (5)
   m_TagString: Untagged
@@ -29688,6 +29873,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1934958777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934958771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc463522ad766241aa06d1bfa48b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1963667183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 606080864043384609, guid: 29c7c6777d353524789d1bbecc7c353b,
@@ -30317,6 +30514,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1684792008018589040, guid: 4c3a740526c53bd4d87c712c8ed6f4a9,
+        type: 3}
+      propertyPath: eventsys
+      value: 
+      objectReference: {fileID: 194244584}
     - target: {fileID: 1684792008018589040, guid: 4c3a740526c53bd4d87c712c8ed6f4a9,
         type: 3}
       propertyPath: Crosshairs
