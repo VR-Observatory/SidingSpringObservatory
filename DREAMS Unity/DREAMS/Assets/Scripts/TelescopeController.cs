@@ -30,8 +30,8 @@ public class TelescopeController : MonoBehaviour
     private float toppartMaximumAngle;
 
     private float midpartDefaultAngle, toppartDefaultAngle;
-    public float sliderValue;
-    public Slider slider;
+    //public float sliderValue;
+    //public Slider slider;
 
     // Start is called before the first frame update
     void Start()
@@ -39,10 +39,10 @@ public class TelescopeController : MonoBehaviour
         midpartDefaultAngle = 90f;
         toppartDefaultAngle = 90f;
 
-        slider.minValue = midpartMinimumAngle;
-        slider.maxValue = midpartMaximumAngle;
+        //slider.minValue = midpartMinimumAngle;
+        //slider.maxValue = midpartMaximumAngle;
 
-        slider.onValueChanged.AddListener(rotateUpdate);
+        //slider.onValueChanged.AddListener(rotateUpdate);
     }
 
     private void rotateUpdate(float value)

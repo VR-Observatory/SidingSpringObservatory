@@ -208,8 +208,8 @@ public class OVRPlayerController : MonoBehaviour
 
 	void Update()
 	{
-        if (Input.GetKeyDown(KeyCode.JoystickButton6))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //if (Input.GetKeyDown(KeyCode.JoystickButton6))
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         if (!playerControllerEnabled)
 		{
