@@ -23,7 +23,7 @@ public class lightcontrol : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        
+        //Debug.Log("enter");
         eventsys.GetComponent<click_control>().all_enable();
 
         if (Crosshairs.GetComponent<DrawStar>().whether_first == false)
