@@ -8,6 +8,7 @@ TagManager:
   - Text
   - Trigger
   - VRGlasses
+  - UI
   layers:
   - Default
   - TransparentFX

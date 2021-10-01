@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControlManager : MonoBehaviour
 {
+    public GameObject[] _UIObjects;
+
     public enum controlModes
     {
         PC,
@@ -17,10 +20,13 @@ public class PlayerControlManager : MonoBehaviour
     public GameObject ovrPlayerController;
     public GameObject pcPerformanceStats;
     public GameObject ovrPerformanceStats;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        _UIObjects = GameObject.FindGameObjectsWithTag("UI");
+
         switch (controlMode)
         {
             case controlModes.PC:
@@ -44,6 +50,10 @@ public class PlayerControlManager : MonoBehaviour
         ovrPlayerController.SetActive(false);
 
         pcPerformanceStats.SetActive(isDisplayPerformanceStats);
+
+        foreach (GameObject uiObject in _UIObjects) {
+            uiObject.GetComponent<OVRRaycaster>().enabled = false;
+        }
     }
     void ActivateControlOVR()
     {
@@ -51,5 +61,10 @@ public class PlayerControlManager : MonoBehaviour
         ovrPlayerController.SetActive(true);
 
         ovrPerformanceStats.SetActive(isDisplayPerformanceStats);
+
+        foreach (GameObject uiObject in _UIObjects)
+        {
+            uiObject.GetComponent<GraphicRaycaster>().enabled = false;
+        }
     }
 }
