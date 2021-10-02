@@ -9,6 +9,8 @@ TagManager:
   - Trigger
   - VRGlasses
   - UI
+  - PCUIObjects
+  - Button
   layers:
   - Default
   - TransparentFX

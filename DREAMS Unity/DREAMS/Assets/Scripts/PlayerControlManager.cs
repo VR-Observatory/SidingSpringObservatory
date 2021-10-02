@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PlayerControlManager : MonoBehaviour
 {
     public GameObject[] _UIObjects;
+    public GameObject[] _PCUIObjects;
+    public GameObject[] buttons;
 
     public enum controlModes
     {
@@ -26,6 +28,8 @@ public class PlayerControlManager : MonoBehaviour
     void Start()
     {
         _UIObjects = GameObject.FindGameObjectsWithTag("UI");
+        _PCUIObjects = GameObject.FindGameObjectsWithTag("PCUIObjects");
+        buttons = GameObject.FindGameObjectsWithTag("Button");
 
         switch (controlMode)
         {
@@ -50,10 +54,12 @@ public class PlayerControlManager : MonoBehaviour
         ovrPlayerController.SetActive(false);
 
         pcPerformanceStats.SetActive(isDisplayPerformanceStats);
-
+        
         foreach (GameObject uiObject in _UIObjects) {
             uiObject.GetComponent<OVRRaycaster>().enabled = false;
         }
+
+        
     }
     void ActivateControlOVR()
     {
@@ -62,9 +68,21 @@ public class PlayerControlManager : MonoBehaviour
 
         ovrPerformanceStats.SetActive(isDisplayPerformanceStats);
 
+        foreach (GameObject pcuiObject in _PCUIObjects)
+        {
+            pcuiObject.SetActive(false);
+        }
+
+        foreach (GameObject button in buttons)
+        {
+            button.GetComponent<BoxCollider>().enabled = false;
+        }
+
         foreach (GameObject uiObject in _UIObjects)
         {
             uiObject.GetComponent<GraphicRaycaster>().enabled = false;
         }
+
+        
     }
 }
