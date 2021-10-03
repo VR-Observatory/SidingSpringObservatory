@@ -29,6 +29,12 @@ public class TelescopeController : MonoBehaviour
     [Range(-90f, 270f)]
     private float toppartMaximumAngle;
 
+    [Header("Default Angles")]
+    [SerializeField]
+    private float midpartStartAngle = 90f;
+    [SerializeField]
+    private float toppartStartAngle = 90f;
+
     private float midpartDefaultAngle, toppartDefaultAngle;
     //public float sliderValue;
     //public Slider slider;
@@ -36,8 +42,8 @@ public class TelescopeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        midpartDefaultAngle = 90f;
-        toppartDefaultAngle = 90f;
+        midpartDefaultAngle = midpartStartAngle;
+        toppartDefaultAngle = toppartStartAngle;
 
         //slider.minValue = midpartMinimumAngle;
         //slider.maxValue = midpartMaximumAngle;
