@@ -16,8 +16,8 @@ public class PlayerSetting : MonoBehaviour
     public float heightMinValue;
     public GameObject playerObject;
 
-    [Header("Player Rotation Mode")]
-    public OVRPlayerController oVRPlayerController;
+    //[Header("Player Rotation Mode")]
+    //public OVRPlayerController oVRPlayerController;
 
     // Start is called before the first frame update
     void Start()
@@ -44,13 +44,13 @@ public class PlayerSetting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.JoystickButton6)) {
             if (!playerMenuAnimator.GetBool("isOpen")) { 
                 changeMenu(true);
-                oVRPlayerController.EnableLinearMovement = false;
-                oVRPlayerController.EnableRotation = false;
+                //oVRPlayerController.EnableLinearMovement = false;
+                //oVRPlayerController.EnableRotation = false;
             }
             else { 
                 changeMenu(false);
-                oVRPlayerController.EnableLinearMovement = true;
-                oVRPlayerController.EnableRotation = true;
+                //oVRPlayerController.EnableLinearMovement = true;
+                //oVRPlayerController.EnableRotation = true;
             }
         }
             
@@ -62,11 +62,11 @@ public class PlayerSetting : MonoBehaviour
     }
 
     public void changeRotationModeToFixed() {
-        oVRPlayerController.SnapRotation = true;
+        //oVRPlayerController.SnapRotation = true;
     }
 
     public void changeRotationModeToSmooth(){
-        oVRPlayerController.SnapRotation = false;
+        //oVRPlayerController.SnapRotation = false;
     }
 
     }

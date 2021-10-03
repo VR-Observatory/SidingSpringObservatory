@@ -1128,7 +1128,7 @@ MonoBehaviour:
   controller: {fileID: 8555499121144783872}
   movementJoystick: {fileID: 5765213459984390871}
   canFly: 0
-  baseSpeed: 6
+  baseSpeed: 8
   sprintFactor: 1.75
   gravity: -9.81
   jumpHeight: 1.5

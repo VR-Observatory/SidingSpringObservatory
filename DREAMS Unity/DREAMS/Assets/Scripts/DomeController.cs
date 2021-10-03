@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class DomeController : MonoBehaviour
 {
+    public Joystick telescopeSlider;
+    public float sliderThreshold = 0.5f;
+
     [Header("Settings")]
     [SerializeField]
     private GameObject dome;
@@ -58,6 +61,21 @@ public class DomeController : MonoBehaviour
             domeDefaultAngle += Time.deltaTime * rotationSpeed;
         }
         else if (Input.GetButton("Telescope Mid Rotate Neg") && domeDefaultAngle >= domeMinimumAngle)
+        {
+            dome.transform.RotateAround(pivot.GetComponent<Renderer>().bounds.center, Vector3.up, Time.deltaTime * rotationSpeed);
+            domeDefaultAngle -= Time.deltaTime * rotationSpeed;
+        }
+    }
+
+    private void MoveMobile()
+    {
+        // Button X/Y for rotating top part
+        if (telescopeSlider.Horizontal > sliderThreshold && domeDefaultAngle <= domeMaximumAngle)
+        {
+            dome.transform.RotateAround(pivot.GetComponent<Renderer>().bounds.center, Vector3.down, Time.deltaTime * rotationSpeed);
+            domeDefaultAngle += Time.deltaTime * rotationSpeed;
+        }
+        else if (telescopeSlider.Horizontal < -sliderThreshold && domeDefaultAngle >= domeMinimumAngle)
         {
             dome.transform.RotateAround(pivot.GetComponent<Renderer>().bounds.center, Vector3.up, Time.deltaTime * rotationSpeed);
             domeDefaultAngle -= Time.deltaTime * rotationSpeed;
