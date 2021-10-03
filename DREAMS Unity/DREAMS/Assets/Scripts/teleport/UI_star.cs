@@ -16,5 +16,6 @@ public class UI_star : MonoBehaviour
     {
         Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = false;
 
+
     }
 }
