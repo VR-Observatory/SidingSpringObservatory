@@ -29,7 +29,7 @@ public class TelescopeController : MonoBehaviour
     [Range(-90f, 270f)]
     private float toppartMaximumAngle;
 
-    [Header("Default Angles")]
+    [Header("Start Angles")]
     [SerializeField]
     private float midpartStartAngle = 90f;
     [SerializeField]
