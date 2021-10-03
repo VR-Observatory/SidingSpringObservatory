@@ -8,7 +8,7 @@ public class lightcontrol : MonoBehaviour
     public GameObject[] teleportlights = new GameObject[3];
     public GameObject Crosshairs;
     public GameObject teleport_notice;
-
+    public GameObject eventsys;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +23,14 @@ public class lightcontrol : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        teleport_notice.SetActive(true);
-        //if (Crosshairs.GetComponent<DrawStar>().whether_first == false)
-        //{
-        //    Crosshairs.GetComponent<DrawStar>().whether_first = true;
-        //}
+        //Debug.Log("enter");
+        eventsys.GetComponent<click_control>().all_enable();
+
+        if (Crosshairs.GetComponent<DrawStar>().whether_first == false)
+        {
+            teleport_notice.SetActive(true);
+            Crosshairs.GetComponent<DrawStar>().whether_first = true;
+        }
         Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = true;
         //Debug.Log("enter active");
         foreach (GameObject obj in teleportlights)
@@ -45,7 +48,9 @@ public class lightcontrol : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        //Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = false;
+        eventsys.GetComponent<click_control>().all_disable();
+
+        Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = false;
         teleport_notice.SetActive(false);
 
         foreach (GameObject obj in teleportlights)
