@@ -11,6 +11,7 @@ public class DrawStar : MonoBehaviour
     public LayerMask guideboard_layer;
     public Camera main_camera;
     public GameObject teleport_notice;
+    public GameObject elevator_notice;
     public bool whether_first = false;
     private bool whether_VR = false;
     private bool whether_colorchanged = false;
@@ -33,6 +34,7 @@ public class DrawStar : MonoBehaviour
             {
                 //cvs2.GetComponent<button_delete>().debugClick();
                 teleport_notice.SetActive(false);
+                elevator_notice.SetActive(false);
             }
                 //Debug.Log("show");
                 Vector3 center_pos = new Vector3(Screen.width / 2, Screen.height / 2, 0);
