@@ -17,13 +17,6 @@ public class DrawStar : MonoBehaviour
     private bool whether_VR = false;
     private bool whether_colorchanged = false;
     private GameObject last_hit;
-    void Start()
-    {
-        if (OVRManager.isHmdPresent)
-        {
-            whether_VR = true;
-        }
-    }
 
     // Use this for initialization
     void OnGUI()
@@ -81,10 +74,10 @@ public class DrawStar : MonoBehaviour
                         //hit.collider.gameObject.GetComponent<click_teleport>().OnClick();
                         hit.collider.gameObject.GetComponent<Button>().onClick.Invoke();
                     }
-                    else
-                    {
-                        hit.collider.gameObject.GetComponent<click_teleport>().OnClick();
-                    }
+                    //else
+                    //{
+                    //    hit.collider.gameObject.GetComponent<click_teleport>().OnClick();
+                    //}
 
                     
                     //hit.collider.gameObject.GetComponent<Button>().Select();
