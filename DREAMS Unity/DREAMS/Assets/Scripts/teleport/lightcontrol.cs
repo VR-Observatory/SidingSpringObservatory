@@ -26,9 +26,10 @@ public class lightcontrol : MonoBehaviour
         //Debug.Log("enter");
         eventsys.GetComponent<click_control>().all_enable();
 
+        teleport_notice.SetActive(true); // instructions should always be visible, even after first
         if (Crosshairs.GetComponent<DrawStar>().whether_first == false)
         {
-            teleport_notice.SetActive(true);
+            //teleport_notice.SetActive(true);
             Crosshairs.GetComponent<DrawStar>().whether_first = true;
         }
         Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = true;
