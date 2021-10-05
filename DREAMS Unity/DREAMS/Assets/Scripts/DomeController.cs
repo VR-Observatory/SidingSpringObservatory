@@ -6,6 +6,7 @@ public class DomeController : MonoBehaviour
 {
     public Joystick telescopeSlider;
     public float sliderThreshold = 0.5f;
+    public GameObject playerController;
 
     [Header("Settings")]
     [SerializeField]
@@ -47,7 +48,10 @@ public class DomeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (playerController.GetComponent<PlayerControlManager>().controlMode.Equals(PlayerControlManager.controlModes.AndroidMobile))
+            MoveMobile();
+        else
+            Move();
         //print(midpartConnection.transform.localEulerAngles);
     }
 
