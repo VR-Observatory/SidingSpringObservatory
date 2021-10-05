@@ -18,6 +18,7 @@ public class FirstPersonControlPC : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     public LayerMask buildingMask;
+    public LayerMask aatMask;
 
     Vector3 velocity;
     bool isGrounded;
@@ -38,6 +39,9 @@ public class FirstPersonControlPC : MonoBehaviour
         if (Input.GetButtonDown("ToggleMenu"))
             keyboardInfo.SetActive(!keyboardInfo.activeSelf);
 
+        if (Input.GetKeyDown("f"))
+            canFly = !canFly;
+
         if (Input.GetButton("Sprint"))
             speed = sprintFactor * baseSpeed;
         else
@@ -52,7 +56,8 @@ public class FirstPersonControlPC : MonoBehaviour
     void Move() {
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask) ||
-            Physics.CheckSphere(groundCheck.position, groundDistance, buildingMask);
+            Physics.CheckSphere(groundCheck.position, groundDistance, buildingMask) ||
+            Physics.CheckSphere(groundCheck.position, groundDistance, aatMask);
 
         if (isGrounded && velocity.y < 0)
             velocity.y = -2f;

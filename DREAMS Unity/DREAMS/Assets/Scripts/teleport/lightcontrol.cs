@@ -26,12 +26,13 @@ public class lightcontrol : MonoBehaviour
         //Debug.Log("enter");
         eventsys.GetComponent<click_control>().all_enable();
 
-        //if (Crosshairs.GetComponent<DrawStar>().whether_first == false)
-        //{
-            teleport_notice.SetActive(true);
-        //    Crosshairs.GetComponent<DrawStar>().whether_first = true;
-        //}
-        //Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = true;
+        teleport_notice.SetActive(true); // instructions should always be visible, even after first
+        if (Crosshairs.GetComponent<DrawStar>().whether_first == false)
+        {
+            //teleport_notice.SetActive(true);
+            Crosshairs.GetComponent<DrawStar>().whether_first = true;
+        }
+        Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = true;
         //Debug.Log("enter active");
         foreach (GameObject obj in teleportlights)
         {
@@ -50,7 +51,7 @@ public class lightcontrol : MonoBehaviour
     {
         eventsys.GetComponent<click_control>().all_disable();
 
-        //Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = false;
+        Crosshairs.GetComponent<DrawStar>().Crosshairs_visible = false;
         teleport_notice.SetActive(false);
 
         foreach (GameObject obj in teleportlights)

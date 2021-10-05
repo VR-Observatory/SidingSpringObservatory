@@ -11,6 +11,9 @@ TagManager:
   - UI
   - PCUIObjects
   - Button
+  - AAT
+  - AATControllerRoom
+  - AATVisiterRoom
   layers:
   - Default
   - TransparentFX
@@ -31,9 +34,9 @@ TagManager:
   - Controllers
   - screen
   - guideboard
-  - 
-  - 
-  - 
+  - AAT
+  - AATVisitorRoom
+  - AATContollerRoom
   - 
   - 
   - 
