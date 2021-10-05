@@ -13,6 +13,7 @@ public class DrawStar : MonoBehaviour
     public GameObject teleport_notice;
     public GameObject elevator_notice;
     public bool whether_first = false;
+    public bool whether_Andriod = false;
     private bool whether_VR = false;
     private bool whether_colorchanged = false;
     private GameObject last_hit;
@@ -27,8 +28,17 @@ public class DrawStar : MonoBehaviour
     // Use this for initialization
     void OnGUI()
     {
+        if (whether_Andriod == true)
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                //cvs2.GetComponent<button_delete>().debugClick();
+                teleport_notice.SetActive(false);
+                elevator_notice.SetActive(false);
+            }
+        }
 
-        if (Crosshairs_visible == true && !whether_VR)
+        if (Crosshairs_visible == true && !whether_VR && whether_Andriod == false)
         {
             if (Input.GetMouseButtonUp(0))
             {
