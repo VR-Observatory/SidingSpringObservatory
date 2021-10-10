@@ -399,7 +399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The AAT has discovered extremely small dwarf galaxies
+  m_text: The AAT instruments include AAOmega, Hermes and Veloce.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 39.25
+  m_fontSize: 38.2
   m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -22.300377}
   m_textInfo:
     textComponent: {fileID: 1460561120672758081}
-    characterCount: 53
+    characterCount: 55
     spriteCount: 0
     spaceCount: 7
     wordCount: 8
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The AAT can observe hundreds of galaxies and stars
+  m_text: The AAT is famous for its 2df survey
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -713,7 +713,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 39.75
+  m_fontSize: 47.75
   m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -754,12 +754,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -22.300377}
   m_textInfo:
     textComponent: {fileID: 2766831462157964334}
-    characterCount: 50
+    characterCount: 36
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 9
+    spaceCount: 7
+    wordCount: 8
     linkCount: 0
-    lineCount: 6
+    lineCount: 5
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "One of the AAT\u2019s rotation axes is parallel to the Earth\u2019s axis"
+  m_text: The AAT uses an equatorial mount
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -1204,7 +1204,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 34.8
+  m_fontSize: 45.35
   m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1245,12 +1245,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -22.300377}
   m_textInfo:
     textComponent: {fileID: 1121485660677391120}
-    characterCount: 62
+    characterCount: 32
     spriteCount: 0
-    spaceCount: 11
-    wordCount: 12
+    spaceCount: 5
+    wordCount: 6
     linkCount: 0
-    lineCount: 6
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
