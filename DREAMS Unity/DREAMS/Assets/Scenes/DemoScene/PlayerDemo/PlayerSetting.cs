@@ -36,21 +36,21 @@ public class PlayerSetting : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
 
         print(playerObject.transform.localPosition);
 
-        if (Input.GetKeyDown(KeyCode.JoystickButton6)) {
+        if (Input.GetButtonDown("Oculus_CrossPlatform_PrimaryThumbstick")) {
             if (!playerMenuAnimator.GetBool("isOpen")) { 
                 changeMenu(true);
-                oVRPlayerController.EnableLinearMovement = false;
-                oVRPlayerController.EnableRotation = false;
+                //oVRPlayerController.EnableLinearMovement = false;
+                //oVRPlayerController.EnableRotation = false;
             }
             else { 
                 changeMenu(false);
-                oVRPlayerController.EnableLinearMovement = true;
-                oVRPlayerController.EnableRotation = true;
+                //oVRPlayerController.EnableLinearMovement = true;
+                //oVRPlayerController.EnableRotation = true;
             }
         }
             

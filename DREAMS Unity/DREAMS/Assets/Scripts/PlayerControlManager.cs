@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerControlManager : MonoBehaviour
 {
-    public GameObject[] _UIObjects;
+    //public GameObject[] _UIObjects;
     public GameObject[] _PCUIObjects;
+    public GameObject[] _VRUIObjects;
     public GameObject[] buttons;
 
     public enum controlModes
@@ -22,13 +23,13 @@ public class PlayerControlManager : MonoBehaviour
     public GameObject ovrPlayerController;
     public GameObject pcPerformanceStats;
     public GameObject ovrPerformanceStats;
-    
 
+   
     // Start is called before the first frame update
     void Start()
     {
-        _UIObjects = GameObject.FindGameObjectsWithTag("UI");
         _PCUIObjects = GameObject.FindGameObjectsWithTag("PCUIObjects");
+        _VRUIObjects = GameObject.FindGameObjectsWithTag("VRUIObjects");
         buttons = GameObject.FindGameObjectsWithTag("Button");
 
         switch (controlMode)
@@ -54,10 +55,15 @@ public class PlayerControlManager : MonoBehaviour
         ovrPlayerController.SetActive(false);
 
         pcPerformanceStats.SetActive(isDisplayPerformanceStats);
-        
-        foreach (GameObject uiObject in _UIObjects) {
-            uiObject.GetComponent<OVRRaycaster>().enabled = false;
+
+        foreach (GameObject vruiObject in _VRUIObjects)
+        {
+            vruiObject.SetActive(false);
         }
+
+        //foreach (GameObject uiObject in _UIObjects) {
+            //uiObject.GetComponent<OVRRaycaster>().enabled = false;
+        //}
 
         
     }
@@ -78,10 +84,10 @@ public class PlayerControlManager : MonoBehaviour
             button.GetComponent<BoxCollider>().enabled = false;
         }
 
-        foreach (GameObject uiObject in _UIObjects)
-        {
-            uiObject.GetComponent<GraphicRaycaster>().enabled = false;
-        }
+        //foreach (GameObject uiObject in _UIObjects)
+        //{
+            //uiObject.GetComponent<GraphicRaycaster>().enabled = false;
+        //}
 
         
     }
