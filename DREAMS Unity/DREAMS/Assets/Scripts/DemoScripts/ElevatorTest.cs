@@ -35,6 +35,7 @@ public class ElevatorTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         MoveLift();
         MoveOuterDoor();
     }
@@ -71,10 +72,14 @@ public class ElevatorTest : MonoBehaviour
 
     private void MoveOuterDoor() {
         for (int i = 0; i < animators.Length; i++) {
-            if (i == currentFloor - 1)
+            if (i == currentFloor - 1) {
                 animators[i].SetBool("isOpen",true);
-            else
+                print(animators[i].GetBool("isOpen"));
+            }
+            else { 
                 animators[i].SetBool("isOpen", false);
+                print(i == currentFloor - 1);
+            }
         }
     }
     

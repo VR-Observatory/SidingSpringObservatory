@@ -41,7 +41,7 @@ public class PlayerSetting : MonoBehaviour
 
         print(playerObject.transform.localPosition);
 
-        if (Input.GetButtonDown("Oculus_CrossPlatform_PrimaryThumbstick")) {
+        if (Input.GetKeyDown(KeyCode.JoystickButton6)) {
             if (!playerMenuAnimator.GetBool("isOpen")) { 
                 changeMenu(true);
                 //oVRPlayerController.EnableLinearMovement = false;
