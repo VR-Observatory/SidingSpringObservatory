@@ -24,6 +24,8 @@ public class ElevatorTest : MonoBehaviour
     public float liftSpeed = 1;
     public float doorSpeed = 100;
 
+    public Animator[] animators;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,9 @@ public class ElevatorTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         MoveLift();
+        MoveOuterDoor();
     }
 
     public void LiftUp() {
@@ -64,6 +68,19 @@ public class ElevatorTest : MonoBehaviour
                             floorNum == 2 ? 2 :
                                 floorNum == 3 ? 3 :
                                     4;
+    }
+
+    private void MoveOuterDoor() {
+        for (int i = 0; i < animators.Length; i++) {
+            if (i == currentFloor - 1) {
+                animators[i].SetBool("isOpen",true);
+                print(animators[i].GetBool("isOpen"));
+            }
+            else { 
+                animators[i].SetBool("isOpen", false);
+                print(i == currentFloor - 1);
+            }
+        }
     }
     
 }
