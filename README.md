@@ -52,6 +52,8 @@ The experience is built for the Oculus Quest 2 virtual reality (VR) headset, but
 ## Links
 [Project Landing Page - Information About our Project](https://sites.google.com/view/2021-s2-techlauncher-dreams/home)
 
+[Download on Google Play](https://play.google.com/store/apps/details?id=com.ANU.DREAMS)
+
 [Google Drive - Documentation & Assets](https://drive.google.com/drive/folders/1rxuu53fC7sdDQ-8IuXaFRbKkWeSXq4gD?usp=sharing)
 
 [Trello - Kanban Style Development Board](https://trello.com/b/t7usLZgQ/vr-dreams-telescope)
